@@ -1,0 +1,73 @@
+background yes
+use_xft yes
+xftfont Sans:size=8
+xftalpha 0.8
+out_to_console no
+update_interval 2
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+stippled_borders 5
+border_margin 4
+border_width 1
+default_color white
+default_shade_color black
+default_outline_color black
+alignment top_right
+gap_x 10
+gap_y 47
+no_buffers no
+uppercase no
+override_utf8_locale yes
+use_spacer no
+maximum_width 210
+short_units yes
+if_up_strictness address
+
+TEXT
+${color white}$alignc${exec whoami} @ $nodename
+${color white}$alignc$sysname $kernel on $machine
+${color white}$alignc Uptime: ${color white}$uptime
+$color$stippled_hr
+${color slate grey}CPU: ${color white}${cpu cpu1}% ${cpubar cpu1}
+${color slate grey}MEM: ${color white}$memperc%  $mem/$memmax $membar
+${color slate grey}CPU0: ${color }${execi 1 sensors|grep "Core 0"|awk '{print $3}'|sed 's/[+]\([0-9.-]*\)°C/\1/'} °C
+${color slate grey}CPU1: ${color }${execi 1 sensors|grep "Core 1"|awk '{print $3}'|sed 's/[+]\([0-9.-]*\)°C/\1/'} °C
+${color slate grey}nVidia GeForce 9600M GT: ${color }${execi 1 nvidia-settings -q gpucoretemp  |grep '):' | cut -c 42-43} °C
+$color$stippled_hr
+${color slate grey}Highest CPU:
+${color} ${top name 1} $alignr ${top cpu 1}
+${color} ${top name 2} $alignr ${top cpu 2}
+${color} ${top name 3} $alignr ${top cpu 3}
+${color} ${top name 4} $alignr ${top cpu 4}
+${color} ${top name 5} $alignr ${top cpu 5}
+${color slate grey}Highest MEM:
+${color} ${top_mem name 1} $alignr ${top_mem mem 1}
+${color} ${top_mem name 2} $alignr ${top_mem mem 2}
+${color} ${top_mem name 3} $alignr ${top_mem mem 3}
+${color} ${top_mem name 4} $alignr ${top_mem mem 4}
+${color} ${top_mem name 5} $alignr ${top_mem mem 5}
+$color$stippled_hr
+${color slate grey}File Systems:
+ /	 		$alignr		$color${fs_used /} / ${fs_size /} ${fs_bar 7,50 /}
+ /home		$alignr		$color${fs_used /home} / ${fs_size /home} ${fs_bar 7,50 /home}${if_mounted /media/DEPO}
+ /DEPO 		$alignr		$color${fs_used /media/DEPO} / ${fs_size /media/DEPO} ${fs_bar 7,50 /media/DEPO}$endif${if_mounted /media/CANAVAR}
+ /CANAVAR 	$alignr		$color${fs_used /media/CANAVAR} / ${fs_size /media/CANAVAR} ${fs_bar 7,50 /media/CANAVAR}$endif
+$color$stippled_hr
+${color slate grey}Recent Package Updates:
+${color}${execi 300 /home/tunix/.arch-packages-news.py &}
+$color$stippled_hr${if_up eth0}
+${color slate grey}Ethernet (${addr eth0}):
+${color}Down: ${downspeed eth0}     Up: ${upspeed eth0}${endif}${if_up eth1}
+${color slate grey}Wireless (${addr eth1}):
+${color}Down: ${downspeed eth1}     Up: ${upspeed eth1}${endif}${if_up ppp0}
+${color slate grey}Turkcell 3G (${addr ppp0}):
+${color}Down: ${downspeed ppp0}     Up: ${upspeed ppp0}${endif}
+

@@ -1,0 +1,27 @@
+[user]
+  name = Alper KANAT
+  email = alperkanat@raptiye.org
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color]
+  ui = true
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dfc = diff --cached
+  lg = log -p --name-only
+  lgg = log --graph
+  lgf = log --graph --name-only
+  ann = annotate
+[push]
+	default = matching
+[github]
+	user = tunix
+	token = 5a68bdbd7d9dc6b6f9e8485649e2cca4
