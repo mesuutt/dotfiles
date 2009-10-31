@@ -46,7 +46,7 @@ export PATH="$PATH:$HOME/.bin"
 export MANPATH="$MANPATH"
 
 # Settings for Python
-export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity"
+export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity:$HOME/projects"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 
