@@ -27,7 +27,7 @@ export HISTSIZE="10000"
 
 # --- BASH COMPLETIONS ---
 
-BCD="$HOME/.bash_completion"
+BCD="$HOME/.bcs"
 
 if [[ -d "$BCD" ]]; then
 	for file in $BCD/*; do
