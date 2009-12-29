@@ -68,6 +68,7 @@ alias emacs="emacs -nw"
 # alias python="ipython"
 
 # yaourt
+alias x="slurpy -c"
 alias y="yaourt"
 
 
