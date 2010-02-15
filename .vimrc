@@ -24,6 +24,7 @@ set nu
 set mouse=
 set nobackup
 set laststatus=2
+set background=dark
 filetype plugin on
 
 iab chlog <c-r>=strftime("%Y-%m-%d")<cr>  Alper KANAT  <alperkanat@raptiye.org><cr>
