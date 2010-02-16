@@ -47,14 +47,19 @@ fi
 export PATH="$PATH:$HOME/.bin"
 
 # Settings for Python
-export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity:$HOME/projects"
+# export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity:$HOME/projects"
 # export PYTHONSTARTUP="$HOME/.pythonrc"
 
 
 
 # --- ALIASES ---
 
-alias ls="ls --color"
+if [[ $(uname) == "Linux" ]]; then
+    alias ls="ls --color"
+else
+    alias ls="ls -G"
+fi
+
 alias ll="ls -l"
 alias la="ls -la"
 alias grep="grep --color -n"
@@ -63,26 +68,23 @@ alias grep="grep --color -n"
 alias l2c="export LANG=C; export LC_ALL=C"
 
 # Use console instead of GUI for Emacs
-alias emacs="emacs -nw"
-
-# use ipython instead of python
-# alias python="ipython"
+# alias emacs="emacs -nw"
 
 # yaourt
-alias y="yaourt"
+# alias y="yaourt"
 
 
 
 # --- COMMANDS ---
 
 # ssh-agent
-# if [[ -z "$SSH_AGENT_PID" && -n "$STY" ]]; then
-# 	eval $(ssh-agent)
-# 	ssh-add
-# fi
+if [[ -z $DISPLAY && $(uname) == "Linux" && -z "$SSH_AGENT_PID" && -n "$STY" ]]; then
+	eval $(ssh-agent)
+	ssh-add
+fi
 
 # Open Screen
-if [[ -n $DISPLAY && -z "$STY" ]]; then
+if [[ -z "$STY" ]]; then
     screen -Rd
 fi
 
