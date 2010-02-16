@@ -77,14 +77,17 @@ alias l2c="export LANG=C; export LC_ALL=C"
 
 # --- COMMANDS ---
 
-# ssh-agent
-if [[ -z $DISPLAY && $(uname) == "Linux" && -z "$SSH_AGENT_PID" && -n "$STY" ]]; then
-	eval $(ssh-agent)
-	ssh-add
-fi
-
 # Open Screen
 if [[ -z "$STY" ]]; then
     screen -Rd
+fi
+
+if [[ -z $DISPLAY && $(uname) == "Linux" && -z "$SSH_AGENT_PID" && -n "$STY" ]]; then
+    # ssh-agent
+	eval $(ssh-agent)
+	ssh-add
+    
+    # motd
+    test -f /etc/motd && cat /etc/motd
 fi
 
