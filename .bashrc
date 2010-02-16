@@ -46,9 +46,6 @@ fi
 # Extending PATH
 export PATH="$PATH:$HOME/.bin"
 
-# Extending MANPATH
-export MANPATH="$MANPATH"
-
 # Settings for Python
 export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity:$HOME/projects"
 # export PYTHONSTARTUP="$HOME/.pythonrc"
@@ -72,7 +69,6 @@ alias emacs="emacs -nw"
 # alias python="ipython"
 
 # yaourt
-alias x="slurpy -c"
 alias y="yaourt"
 
 
