@@ -1,3 +1,4 @@
+set nocompatible
 " set ignorecase
 set hlsearch
 set incsearch
