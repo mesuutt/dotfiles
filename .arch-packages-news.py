@@ -11,21 +11,22 @@ Written by: Alper KANAT (tunix@raptiye.org)
 
 """
 
-import urllib2
+from urllib import request
 from xml.dom import minidom
 
-def getPackageNames (address, lines):
-	try:
-		urllib2.socket.setdefaulttimeout = 3
-		temp = urllib2.urlopen(address)
-		xmldoc = minidom.parse(temp)
-		temp.close()
-		items = xmldoc.getElementsByTagName('item')
-		for item in items[:lines]:
-			title = item.getElementsByTagName('title')[0].firstChild.nodeValue
-			print title,
-	except urllib2.URLError:
-		print "No Connection"
+def getPackageNames(url, limit):
+    try:
+        with request.urlopen(url, timeout=3) as updates:
+            xmlSource = "".join([tmp.decode("utf-8") for tmp in updates.readlines()])
+            xmlObject = minidom.parseString(xmlSource)
+            xmlPackageNodes = xmlObject.getElementsByTagName("item")[:limit]
+            for package in xmlPackageNodes:
+                print(package.getElementsByTagName("title")[0].firstChild.nodeValue, end="")
+    except urllib.error.HTTPError:
+        print("No Connection", end="")
+    except urllib.error.URLError:
+        print("No Connection", end="")
 
 if __name__ == '__main__':
 	getPackageNames('http://www.archlinux.org/feeds/packages/', 10)
+
