@@ -22,8 +22,10 @@ add_keys() {
 
 kill_agent() {
     read_agent_info
-    kill $SSH_AGENT_PID
-    rm $SSH_AGENT_INFO
+    if is_running; then
+        kill $SSH_AGENT_PID
+        rm $SSH_AGENT_INFO
+    fi
 }
 
 is_running() {
