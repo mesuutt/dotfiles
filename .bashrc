@@ -75,7 +75,7 @@ fi
 
 source "$HOME/.ssh/functions.sh"
 
-if [[ isLinux || ! is_running ]]; then
+if [[ isLinux && ! is_running ]]; then
     create_agent
     add_keys
 fi
