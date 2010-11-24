@@ -27,22 +27,6 @@ export HISTSIZE="10000"
 # ls colors
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-
-
-# --- BASH COMPLETIONS ---
-
-BCD="$HOME/.bcs"
-
-if [[ -d "$BCD" ]]; then
-	for file in $BCD/*; do
-		if [[ -f "$file" ]]; then
-			source "$file"
-		fi
-	done
-fi
-
-
-
 # Extending PATH
 export PATH="$PATH:$HOME/.bin"
 
@@ -69,26 +53,26 @@ alias lgrep="grep --color -n"
 alias l2c="export LANG=C; export LC_ALL=C"
 
 # Use console instead of GUI for Emacs
-# alias emacs="emacs -nw"
+alias emacs="emacs -nw"
 
 # yaourt
-# alias y="yaourt"
+alias y="yaourt"
 
 
 
-# --- COMMANDS ---
+# --- POST ---
 
 # Open Screen
 if [[ -z "$STY" ]]; then
     screen -Rd
 fi
 
-if [[ -z $DISPLAY && $(uname) == "Linux" && -z "$SSH_AGENT_PID" && -n "$STY" ]]; then
-    # ssh-agent
-	eval $(ssh-agent)
-	ssh-add
-    
-    # motd
-    test -f /etc/motd && cat /etc/motd
+# --- SSH Agent ---
+
+source "$HOME/.ssh/functions.sh"
+
+if ! is_running; then
+    create_agent
+    add_keys
 fi
 
