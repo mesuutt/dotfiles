@@ -62,6 +62,10 @@ alias y="yaourt"
 
 # --- POST ---
 
+# Additional Functions
+ADDITIONAL_FUNCTIONS="$HOME/.bin/functions.sh"
+test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
+
 # Open Screen
 if [[ -z "$STY" ]]; then
     screen -Rd
