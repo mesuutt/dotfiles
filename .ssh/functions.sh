@@ -13,7 +13,7 @@ read_agent_info() {
 }
 
 add_keys() {
-    KEY_LIST=`ls $SSH_CONF_DIR|grep -E "^id_"|grep -v pub`
+    KEY_LIST=`find $SSH_CONF_DIR -name "id_rsa*"|grep -v pub`
     read_agent_info
     for key in $KEY_LIST; do
         ssh-add $SSH_CONF_DIR/$key
