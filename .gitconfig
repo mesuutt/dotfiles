@@ -14,8 +14,8 @@
   ci = commit
   br = branch
   co = checkout
-  df = diff
-  dfc = diff --cached
+  df = diff -b
+  dfc = diff -b --cached
   lg = log -p --name-only
   lgg = log --graph
   lgf = log --graph --name-only
