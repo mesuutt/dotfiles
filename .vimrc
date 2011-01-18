@@ -47,4 +47,3 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 :noremap <C-right> :bn<CR>
 
 syn on
-
