@@ -1,5 +1,5 @@
 [user]
-  name = Alper KANAT
+  name = Alper Kanat
   email = alperkanat@raptiye.org
 [color]
   branch = auto
@@ -14,8 +14,8 @@
   ci = commit
   br = branch
   co = checkout
-  df = diff
-  dfc = diff --cached
+  df = diff -b
+  dfc = diff -b --cached
   lg = log -p --name-only
   lgg = log --graph
   lgf = log --graph --name-only
