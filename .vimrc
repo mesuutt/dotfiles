@@ -27,8 +27,6 @@ set history=50
 set showcmd
 set showmatch
 set title
-set smarttab
-set smartindent
 set wildmenu
 set nowrap
 set ai
@@ -39,6 +37,8 @@ set nobackup
 set laststatus=2
 set background=dark
 set ruler
+set smarttab
+set smartindent
 
 filetype plugin on
 syn on
