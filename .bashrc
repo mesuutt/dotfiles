@@ -35,8 +35,8 @@ export PATH="$PATH:$HOME/.bin"
 # export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # include aliases
-if [[ -f "$(HOME)/.bash_aliases" ]]; then
-    . $(HOME)/.bash_aliases
+if [[ -f "$HOME/.bash_aliases" ]]; then
+    . $HOME/.bash_aliases
 fi
 
 
