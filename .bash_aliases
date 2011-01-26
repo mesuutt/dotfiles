@@ -24,6 +24,7 @@ gr () {
         ! -iwholename "*.svn*" \
         ! -iwholename "*.git*" \
         ! -iwholename "*CVS*" \
+        ! -iwholename "*cache*" \
         ! -iwholename "*RCS*" \
         ! -iwholename "*/graphs/*" \
         ! -name ".*" \
