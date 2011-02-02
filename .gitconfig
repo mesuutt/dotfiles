@@ -1,27 +1,35 @@
 [user]
-  name = Alper Kanat
-  email = alperkanat@raptiye.org
+    name = Alper Kanat
+    email = alperkanat@raptiye.org
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color]
-  ui = true
+    ui = true
 [core]
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    pager = less -FXRS
+    editor = vim
+    excludesfile = /home/tunix/.gitignore
+    autocrlf = false
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff -b
-  dfc = diff -b --cached
-  lg = log -p --name-only
-  lgg = log --graph
-  lgf = log --graph --name-only
-  ann = annotate
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff -b
+    dfc = diff -b --cached
+    lg = log -p --name-only
+    lgg = log --graph
+    lgf = log --graph --name-only
+    ann = annotate
 [push]
 	default = matching
 [github]
 	user = tunix
 	token = 5a68bdbd7d9dc6b6f9e8485649e2cca4
+[merge]
+    summary = true
+[branch]
+    autosetupmerge = true
