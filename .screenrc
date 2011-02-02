@@ -82,7 +82,7 @@ bind } history
 hardstatus off
 hardstatus alwayslastline
 # hardstatus string "%-Lw%{= BW}%58>%n%f* %t%{-}%+Lw%< %{= kG}%-=%d %M %Y %c:%s%{-}"
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d %M %Y %{W} %c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d.%m.%Y %{W} %c %{g}]'
 
 # start windows from 1 not 0
 bind c screen 1
