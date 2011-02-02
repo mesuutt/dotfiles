@@ -96,3 +96,6 @@ altscreen on
 # term on X scrolling mechanism
 termcapinfo xterm* ti@:te@
 
+# enabling utf-8
+defutf8 on
+utf8 on on
