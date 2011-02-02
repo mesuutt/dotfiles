@@ -49,7 +49,7 @@ test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 
 # Open Screen
 if [[ -z "$STY" ]]; then
-    screen -URd
+    screen -Rd
 fi
 
 # --- SSH Agent ---
