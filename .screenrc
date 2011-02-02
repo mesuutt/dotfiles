@@ -99,3 +99,5 @@ termcapinfo xterm* ti@:te@
 # enabling utf-8
 defutf8 on
 utf8 on on
+encoding UTF-8 UTF-8
+defencoding UTF-8

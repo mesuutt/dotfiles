@@ -28,7 +28,7 @@ kill_agent() {
     fi
 }
 
-is_running() {
+is_ssh_running() {
     read_agent_info
 
     test -z $SSH_AGENT_PID && return 1

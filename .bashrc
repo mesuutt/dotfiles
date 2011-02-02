@@ -49,14 +49,20 @@ test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 
 # Open Screen
 if [[ -z "$STY" ]]; then
-    screen -Rd
+    if isScreenRunning; then
+        screen -Rd
+    else
+        screen
+    fi
+else
+    echo "$STY" > "$SCREEN_INFO"
 fi
 
 # --- SSH Agent ---
 
 source "$HOME/.ssh/functions.sh"
 
-if isLinux && ! is_running; then
+if isLinux && ! is_ssh_running; then
     create_agent
     add_keys
 fi
