@@ -50,7 +50,7 @@ test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 # Open Screen
 if [[ -z "$STY" ]]; then
     if isScreenRunning; then
-        screen -Rd
+        screen -RD
     else
         screen
     fi
