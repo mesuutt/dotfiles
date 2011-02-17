@@ -26,9 +26,6 @@
     ann = annotate
 [push]
 	default = matching
-[github]
-	user = tunix
-	token = 5a68bdbd7d9dc6b6f9e8485649e2cca4
 [merge]
     summary = true
 [branch]
