@@ -1,3 +1,7 @@
+.python_history
+.sqlite_history
+.screen_info
+.DS_Store
 .ICEauthority
 .Skype
 .Xauthority
