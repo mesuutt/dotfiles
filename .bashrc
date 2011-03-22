@@ -31,8 +31,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH="$PATH:$HOME/.bin"
 
 # Settings for Python
-# export PYTHONPATH="$PYTHONPATH:$HOME/Projects:$HOME/Projects/vidiluck:$HOME/Projects/twity:$HOME/projects"
-# export PYTHONSTARTUP="$HOME/.pythonrc"
+export PYTHONPATH="$PYTHONPATH:$HOME/projects"
+export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # include aliases
 if [[ -f "$HOME/.bash_aliases" ]]; then
