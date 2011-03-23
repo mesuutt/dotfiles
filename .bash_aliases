@@ -19,6 +19,9 @@ alias emacs="emacs -nw"
 # yaourt
 alias y="yaourt"
 
+# virsh
+alias virsh="virsh -c qemu:///system"
+
 # grep that excludes some files from the output
 gr () {
     find -type f \
