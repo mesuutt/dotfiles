@@ -31,7 +31,6 @@ set wildmenu
 set nowrap
 set ai
 set nu
-set paste
 set mouse=
 set nobackup
 set laststatus=2
