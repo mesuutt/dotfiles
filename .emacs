@@ -42,5 +42,3 @@
 
 ;; Keybindings
 (global-set-key "\C-l" 'goto-line)
-(global-set-key [home] 'beginning-of-buffer)
-(global-set-key [end] 'end-of-buffer)
