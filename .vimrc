@@ -7,11 +7,6 @@ map <F8> :vs<CR>:bn<CR>
 map <C-x> :qa!<CR>
 nnoremap <silent> <F9> :TlistToggle<CR>
 
-:let Tlist_WinWidth = 50
-:let g:buftabs_in_statusline=1 
-:noremap <C-left> :bp<CR>
-:noremap <C-right> :bn<CR>
-
 set nocompatible
 set hlsearch
 set incsearch
