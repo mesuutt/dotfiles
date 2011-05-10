@@ -36,3 +36,4 @@ set smartindent
 
 filetype plugin on
 syn on
+colorscheme solarized
