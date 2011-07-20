@@ -48,15 +48,15 @@ ADDITIONAL_FUNCTIONS="$HOME/.bin/functions.sh"
 test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 
 # Open Screen
-if [[ -z "$STY" ]]; then
-    if isScreenRunning; then
-        screen -RD
-    else
-        screen
-    fi
-else
-    echo "$STY" > "$SCREEN_INFO"
-fi
+# if [[ -z "$STY" ]]; then
+#     if isScreenRunning; then
+#         screen -RD
+#     else
+#         screen
+#     fi
+# else
+#     echo "$STY" > "$SCREEN_INFO"
+# fi
 
 # --- SSH Agent ---
 
