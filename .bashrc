@@ -1,13 +1,4 @@
-if [[ $- != *i* ]]; then
-	# Shell is non-interactive. Be done now
-	return
-fi
-
-
-
 # --- PERSONAL SETTINGS ---
-
-test -n "$DISPLAY" && export TERM="xterm"
 
 export PS1='\[\033[01;33m\][`date +'%H:%M'`] \[\033[01;31m\](\[\033[00;37m\]\u@\h \W\[\033[01;31m\])\[\033[00m\]\$ '
 
