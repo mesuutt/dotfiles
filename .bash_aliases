@@ -12,6 +12,7 @@ alias screen="screen -UU"
 
 # Set Locale to C
 alias l2c="export LANG=C; export LC_ALL=C"
+alias l2tr="export LANG=tr_TR.UTF-8; export LC_ALL=tr_TR.UTF-8; export LANGUAGE=tr_TR.UTF-8; export LC_CTYPE=tr_TR.UTF-8"
 
 # Use console instead of GUI for Emacs
 alias emacs="emacs -nw"
