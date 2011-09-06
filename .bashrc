@@ -2,6 +2,12 @@
 
 export PS1='\[\033[01;33m\][`date +'%H:%M'`] \[\033[01;31m\](\[\033[00;37m\]\u@\h \W\[\033[01;31m\])\[\033[00m\]\$ '
 
+# Locale Settings
+export LANG="tr_TR.UTF-8"
+export LC_ALL="tr_TR.UTF-8"
+export LANGUAGE="tr_TR.UTF-8"
+export LC_CTYPE="tr_TR.UTF-8"
+
 export EDITOR="vim"
 export VISUAL="vim"
 
