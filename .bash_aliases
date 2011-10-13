@@ -8,7 +8,6 @@ alias ll="ls -l"
 alias la="ls -la"
 alias grep="grep --color"
 alias lgrep="grep --color -n"
-alias screen="screen -UU"
 
 # Set Locale to C
 alias l2c="export LANG=C; export LC_ALL=C"

@@ -45,9 +45,12 @@ test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 #     else
 #         screen
 #     fi
-# else
-#     echo "$STY" > "$SCREEN_INFO"
 # fi
+
+# store screen pid
+if [[ -n "$STY" ]]; then
+    echo "$STY" > "$SCREEN_INFO"
+fi
 
 # --- SSH Agent ---
 
