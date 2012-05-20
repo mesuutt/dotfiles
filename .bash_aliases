@@ -8,6 +8,16 @@ alias ll="ls -l"
 alias la="ls -la"
 alias grep="grep --color"
 alias lgrep="grep --color -n"
+alias diff='colordiff'
+
+# from bekir
+alias syslog='sudo tail -F -n 25 /var/log/syslog.log | ccze -A -p syslog'
+alias dmesg='dmesg | ccze -A'
+alias dt='date +%H:%M:%S\ %Y-%m-%d\ %a\ %b | ccze -A'
+ps () { /bin/ps $@ | ccze -A; }
+tail () { /usr/bin/tail $@ | ccze -A; }
+t () { /usr/bin/tail -f * | ccze -A; }
+ant () { /usr/bin/ant $@ | ccze -A ; }
 
 # Set Locale to C
 alias l2c="export LANG=C; export LC_ALL=C"
