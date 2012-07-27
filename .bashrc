@@ -11,7 +11,7 @@ export LC_CTYPE="tr_TR.UTF-8"
 export EDITOR="vim"
 export VISUAL="vim"
 
-# History Settings
+# History Settings
 export HISTCONTROL="ignoreboth"
 export HISTSIZE="10000"
 
@@ -22,7 +22,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH="$PATH:$HOME/.bin"
 
 # Settings for Python
-export PYTHONPATH="$PYTHONPATH:$HOME/projects"
+export PYTHONPATH="$PYTHONPATH:$HOME/projects:$HOME/Projects"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # include aliases
