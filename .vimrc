@@ -40,4 +40,3 @@ endif
 
 filetype plugin on
 syn on
-colorscheme solarized
