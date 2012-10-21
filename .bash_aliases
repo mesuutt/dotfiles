@@ -12,7 +12,7 @@ alias diff='colordiff'
 
 # from bekir
 alias syslog='sudo tail -F -n 25 /var/log/syslog.log | ccze -A -p syslog'
-alias dmesg='dmesg | ccze -A'
+alias dmesgc='dmesg | ccze -A'
 alias dt='date +%H:%M:%S\ %Y-%m-%d\ %a\ %b | ccze -A'
 psc () { /bin/ps $@ | ccze -A; }
 tail () { /usr/bin/tail $@ | ccze -A; }
@@ -55,3 +55,16 @@ gr () {
         ! -name "*bak" \
     | xargs grep --color=auto $@ 2>/dev/null;
 }
+
+if ! systemd-notify --booted; then # not using systemd
+    alias start='sudo rc.d start'
+    alias restart='sudo rc.d restart'
+    alias stop='sudo rc.d stop'
+else
+    alias start='sudo systemctl start'
+    alias restart='sudo systemctl restart'
+    alias stop='sudo systemctl stop'
+    alias enable='sudo systemctl enable'
+    alias status='sudo systemctl status'
+    alias disable='sudo systemctl disable'
+fi
