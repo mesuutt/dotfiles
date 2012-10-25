@@ -56,15 +56,71 @@ gr () {
     | xargs grep --color=auto $@ 2>/dev/null;
 }
 
-if ! systemd-notify --booted; then # not using systemd
-    alias start='sudo rc.d start'
-    alias restart='sudo rc.d restart'
-    alias stop='sudo rc.d stop'
+# simplified systemd command, for instance "sudo systemctl stop xxx.service" - > "0.stop xxx"
+if ! systemd-notify --booted;
+then  # for not systemd
+    0.start() {
+        sudo rc.d start $1
+    }
+
+    0.restart() {
+        sudo rc.d restart $1
+    }
+
+    0.stop() {
+        sudo rc.d stop $1
+    }
 else
-    alias start='sudo systemctl start'
-    alias restart='sudo systemctl restart'
-    alias stop='sudo systemctl stop'
-    alias enable='sudo systemctl enable'
-    alias status='sudo systemctl status'
-    alias disable='sudo systemctl disable'
+# start systemd service
+    0.start() {
+        sudo systemctl start $1.service
+    }
+# restart systemd service
+    0.restart() {
+        sudo systemctl restart $1.service
+    }
+# stop systemd service
+    0.stop() {
+        sudo systemctl stop $1.service
+    }
+# enable systemd service
+    0.enable() {
+        sudo systemctl enable $1.service
+    }
+# disable a systemd service
+    0.disable() {
+        sudo systemctl disable $1.service
+    }
+# show the status of a service
+    0.status() {
+        systemctl status $1.service
+    }
+# reload a service configuration
+    0.reload() {
+        sudo systemctl reload $1.service
+    }
+# list all running service
+    0.list() {
+        systemctl
+    }
+# list all failed service
+    0.failed () {
+        systemctl --failed
+    }
+# list all systemd available unit files
+    0.list-files() {
+        systemctl list-unit-files
+    }
+# check the log
+    0.log() {
+        sudo journalctl
+    }
+# show wants
+    0.wants() {
+        systemctl show -p "Wants" $1.target
+    }
+# analyze the system
+    0.analyze() {
+        systemd-analyze $1
+    }
 fi
