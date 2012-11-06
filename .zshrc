@@ -32,10 +32,13 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # screen auto-start
 # zstyle :omz:plugins:screen auto-start on
 
+# tmux auto-start
+zstyle :omz:plugins:tmux auto-start on
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git django extract history-substring-search npm osx python ssh-agent sublime svn urltools)
+plugins=(git django extract history-substring-search npm osx python ssh-agent sublime svn urltools tmux)
 
 source $ZSH/oh-my-zsh.sh
 
