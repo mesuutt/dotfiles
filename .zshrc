@@ -1,67 +1,43 @@
-#
-# Sets Oh My Zsh options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':omz:module:editor' keymap 'emacs'
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="sorin"
 
-# Auto convert .... to ../..
-zstyle ':omz:module:editor' dot-expansion 'no'
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set case-sensitivity for completion, history lookup, etc.
-zstyle ':omz:*:*' case-sensitive 'no'
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# Color output (auto set to 'no' on dumb terminals).
-zstyle ':omz:*:*' color 'yes'
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-# Auto set the tab and window titles.
-zstyle ':omz:module:terminal' auto-title 'yes'
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-# Set the Zsh modules to load (man zshmodules).
-# zstyle ':omz:load' zmodule 'attr' 'stat'
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# Set the Zsh functions to load (man zshcontrib).
-# zstyle ':omz:load' zfunction 'zargs' 'zmv'
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-# Set the Oh My Zsh modules to load (browse modules).
-# The order matters.
-zstyle ':omz:load' omodule \
-    'environment' \
-    'terminal' \
-    'editor' \
-    'history' \
-    'directory' \
-    'spectrum' \
-    'utility' \
-    'completion' \
-    'archive' \
-    'git' \
-    'node' \
-    'osx' \
-    'pacman' \
-    'screen' \
-    'ssh-agent' \
-    'syntax-highlighting' \
-    'prompt'
+# ssh-agent forwarding
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':omz:module:prompt' theme 'sorin'
+# screen auto-start
+# zstyle :omz:plugins:screen auto-start on
 
-# This will make you shout: OH MY ZSHELL!
-source "$OMZ/init.zsh"
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git django extract history-substring-search npm osx python ssh-agent sublime svn urltools)
+
+source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-zstyle ':omz:module:pacman' frontend 'yaourt'
-zstyle ':omz:module:ssh-agent' forwarding 'yes'
-zstyle ':omz:module:syntax-highlighting' highlighters \
-    'main' \
-    'brackets' \
-    'pattern' \
-    'cursor' \
-    'root'
-zstyle ':omz:module:screen' auto-start 'yes'
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
