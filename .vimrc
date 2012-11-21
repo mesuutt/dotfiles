@@ -34,6 +34,8 @@ set ruler
 set smarttab
 set smartindent
 
+colorscheme solarized
+
 if has("autocmd")
     filetype plugin indent on
 endif
