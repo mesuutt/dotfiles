@@ -20,6 +20,7 @@
     co = checkout
     df = diff -b
     dfc = diff -b --cached
+    dfw = diff -b --word-diff
     lg = log -p --name-only
     lgg = log --graph
     lgf = log --graph --name-only
