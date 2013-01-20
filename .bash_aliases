@@ -39,6 +39,10 @@ sedc(){ sed -e '/^#/d' -e 's/#.*$//' $1; }
 #Quickly cd out Directories : up 2 == cd ../../
 up() { local x='';for i in $(seq ${1:-1});do x="$x../"; done;cd $x; }
 
+
+bcp(){ mkdir -p `dirname $2` && cp -R "$1" "$2"; }
+bmv(){ mkdir -p `dirname $2` && mv "$1" "$2"; }
+
 # Set Locale to C
 alias l2c="export LANG=C; export LC_ALL=C"
 alias l2tr="export LANG=tr_TR.UTF-8; export LC_ALL=tr_TR.UTF-8; export LANGUAGE=tr_TR.UTF-8; export LC_CTYPE=tr_TR.UTF-8"
