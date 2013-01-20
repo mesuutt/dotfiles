@@ -11,7 +11,7 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
     pager = less -FXRS
     editor = vim
-    excludesfile = /home/tunix/.gitignore
+    excludesfile = ~/.gitignore
     autocrlf = false
 [alias]
     st = status

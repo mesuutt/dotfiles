@@ -4,11 +4,22 @@ else
     alias ls="ls -G"
 fi
 
-alias ll="ls -l"
+alias ll='ls -alF'
 alias la="ls -la"
 alias grep="grep --color"
 alias lgrep="grep --color -n"
 alias diff='colordiff'
+alias ..='cd ..'
+alias c='clear'
+alias du='du -ch'
+alias df='df -h'
+alias share='python -m SimpleHTTPServer'
+
+#Open man pages with most for colorize.
+hash most &> /dev/null
+if [ $? -eq 0 ]; then
+    alias man='man -P most'
+fi
 
 # from bekir
 alias syslog='sudo tail -F -n 25 /var/log/syslog.log | ccze -A -p syslog'
@@ -18,6 +29,15 @@ psc () { /bin/ps $@ | ccze -A; }
 tail () { /usr/bin/tail $@ | ccze -A; }
 t () { /usr/bin/tail -f * | ccze -A; }
 ant () { /usr/bin/ant $@ | ccze -A ; }
+
+#Backup file before edit
+svim() { cp {,`date +%Y%m%d`_}$*; vim "$*"; }
+
+# Remove unnecessary lines from file
+sedc(){ sed -e '/^#/d' -e 's/#.*$//' $1; }
+
+#Quickly cd out Directories : up 2 == cd ../../
+up() { local x='';for i in $(seq ${1:-1});do x="$x../"; done;cd $x; }
 
 # Set Locale to C
 alias l2c="export LANG=C; export LC_ALL=C"

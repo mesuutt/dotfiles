@@ -1,12 +1,6 @@
 # --- PERSONAL SETTINGS ---
 
-export PS1='\[\033[01;33m\][`date +'%H:%M'`] \[\033[01;31m\](\[\033[00;37m\]\u@\h \W\[\033[01;31m\])\[\033[00m\]\$ '
-
-# Locale Settings
-export LANG="tr_TR.utf8"
-export LC_ALL="tr_TR.utf8"
-export LANGUAGE="tr_TR.utf8"
-export LC_CTYPE="tr_TR.utf8"
+export PS1='\[\033[01;33m\][`date +'%H:%M'`]\[\033[01;31m\](\[\033[00;37m\]\u@\h \w\[\033[01;31m\])\[\033[00m\]\$ '
 
 export EDITOR="vim"
 export VISUAL="vim"
@@ -14,6 +8,8 @@ export VISUAL="vim"
 # History Settings
 export HISTCONTROL="ignoreboth"
 export HISTSIZE="10000"
+
+export PROMPT_DIRTRIM=3
 
 # ls colors
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -30,7 +26,10 @@ if [[ -f "$HOME/.bash_aliases" ]]; then
     . $HOME/.bash_aliases
 fi
 
-
+# I am keeping symbolic links and special scripts in .bin directory
+if [ -d ~/.bin ]; then
+  PATH=$PATH:~/.bin
+fi
 
 # --- POST ---
 

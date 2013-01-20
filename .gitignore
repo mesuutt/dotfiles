@@ -32,3 +32,6 @@
 .zsh_history
 .viminfo
 .bin
+.idea/
+*.pyc
+*~
