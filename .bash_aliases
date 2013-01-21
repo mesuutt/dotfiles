@@ -4,7 +4,7 @@ else
     alias ls="ls -G"
 fi
 
-alias ll='ls -alF'
+alias ll="ls -l"
 alias la="ls -la"
 alias grep="grep --color"
 alias lgrep="grep --color -n"
@@ -15,7 +15,7 @@ alias du='du -ch'
 alias df='df -h'
 alias share='python -m SimpleHTTPServer'
 
-#Open man pages with most for colorize.
+# Open man pages with most for colorize.
 hash most &> /dev/null
 if [ $? -eq 0 ]; then
     alias man='man -P most'
@@ -30,13 +30,13 @@ tail () { /usr/bin/tail $@ | ccze -A; }
 t () { /usr/bin/tail -f * | ccze -A; }
 ant () { /usr/bin/ant $@ | ccze -A ; }
 
-#Backup file before edit
+# Backup file before edit
 svim() { cp {,`date +%Y%m%d`_}$*; vim "$*"; }
 
 # Remove unnecessary lines from file
 sedc(){ sed -e '/^#/d' -e 's/#.*$//' $1; }
 
-#Quickly cd out Directories : up 2 == cd ../../
+# Quickly cd out Directories : up 2 == cd ../../
 up() { local x='';for i in $(seq ${1:-1});do x="$x../"; done;cd $x; }
 
 
