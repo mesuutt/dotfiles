@@ -17,7 +17,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # Settings for Python
 #export PYTHONPATH="$PYTHONPATH:$HOME/projects:$HOME/Projects"
 export PYTHONSTARTUP="$HOME/.pythonrc"
-
+if [ -f "/mnt/dev_era/python/venvs/" ]; then
+    export WORKON_HOME="/mnt/dev_era/python/venvs/"
+fi
 
 if [[ -f "$HOME/.bash_aliases" ]]; then
     source $HOME/.bash_aliases

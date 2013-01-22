@@ -14,6 +14,7 @@ alias c='clear'
 alias du='du -ch'
 alias df='df -h'
 alias share='python -m SimpleHTTPServer'
+alias halt='halt -p'
 
 # Open man pages with most for colorize.
 hash most &> /dev/null
