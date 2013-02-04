@@ -14,12 +14,14 @@ alias c='clear'
 alias du='du -ch'
 alias df='df -h'
 alias share='python -m SimpleHTTPServer'
-alias halt='halt -p'
+alias halt='sudo halt -p'
 
 if [ -f /usr/bin/apt-get ]; then
+    alias agu='sudo apt-get update'
     alias agi='sudo apt-get install'
     alias agr='sudo apt-get remove'
     alias agp='sudo apt-get purge'
+    alias aps='sudo aptitude search'
 fi
 
 # Open man pages with most for colorize.

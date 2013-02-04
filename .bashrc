@@ -15,10 +15,10 @@ export PROMPT_DIRTRIM=2
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Settings for Python
-#export PYTHONPATH="$PYTHONPATH:$HOME/projects:$HOME/Projects"
+export PYTHONDONTWRITEBYTECODE="1"
 export PYTHONSTARTUP="$HOME/.pythonrc"
-if [ -f "/mnt/dev_era/python/venvs/" ]; then
-    export WORKON_HOME="/mnt/dev_era/python/venvs/"
+if [ -f "/mnt/dev_area/python/venvs/" ]; then
+    export WORKON_HOME="/mnt/dev_area/python/venvs/"
 fi
 
 if [[ -f "$HOME/.bash_aliases" ]]; then
