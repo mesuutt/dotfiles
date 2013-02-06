@@ -21,7 +21,7 @@ if [ -f /usr/bin/apt-get ]; then
     alias agi='sudo apt-get install'
     alias agr='sudo apt-get remove'
     alias agp='sudo apt-get purge'
-    alias aps='sudo aptitude search'
+    alias aptis='sudo aptitude search'
 fi
 
 # Open man pages with most for colorize.
