@@ -25,6 +25,7 @@
     lgg = log --graph
     lgf = log --graph --name-only
     ann = annotate
+    undo = reset --soft HEAD^
 [push]
 	default = matching
 [merge]
