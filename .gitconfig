@@ -24,10 +24,10 @@
     lg = log -p --name-only
     lgg = log --graph
     lgf = log --graph --name-only
+    lgp = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+    standup = log --since '1 day ago' --oneline --author slackermesut@gmail.com
     ann = annotate
     undo = reset --soft HEAD^
-    ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
-    standup = log --since '1 day ago' --oneline --author slackermesut@gmail.com
 [push]
 	default = matching
 [merge]
