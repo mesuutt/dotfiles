@@ -42,8 +42,15 @@ plugins=(git django extract history-substring-search npm python ssh-agent sublim
 
 source $ZSH/oh-my-zsh.sh
 
+# Disable auto correct
+unsetopt correct_all
+
+# Exports
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/.bin
-
+export WORKON_HOME=$HOME/.envs
 #autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
+
+# Load virtualenvwrapper settings
+source /usr/local/bin/virtualenvwrapper.sh
