@@ -54,3 +54,7 @@ export WORKON_HOME=$HOME/.envs
 
 # Load virtualenvwrapper settings
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Run tmux when open terminal
+[[ $TERM = "xterm" ]] && { tmux && exit 0; }
+

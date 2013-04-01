@@ -30,6 +30,7 @@
     undo = reset --soft HEAD^
     sshow = "!f() { git stash show stash^{/$*}; }; f"
     sapply = "!f() { git stash apply stash^{/$*}; }; f"
+    ls-conflicts = diff --name-only --diff-filter=U
 [push]
 	default = matching
 [merge]
