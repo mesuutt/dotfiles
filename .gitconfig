@@ -31,6 +31,7 @@
     sshow = "!f() { git stash show stash^{/$*}; }; f"
     sapply = "!f() { git stash apply stash^{/$*}; }; f"
     ls-conflicts = diff --name-only --diff-filter=U
+    amend = commit --amend -C HEAD
 [push]
 	default = matching
 [merge]
