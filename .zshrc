@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="tux"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -50,7 +50,10 @@ unsetopt correct_all
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/.bin
 export WORKON_HOME=$HOME/.envs
 #autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
+#[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
+
+#z - autojump alternative
+test ~/.bin/z/z.sh && source ~/.bin/z/z.sh
 
 # Load virtualenvwrapper settings
 source /usr/local/bin/virtualenvwrapper.sh
