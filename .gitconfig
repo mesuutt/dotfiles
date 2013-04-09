@@ -46,6 +46,9 @@
     ls-conflicts = diff --name-only --diff-filter=U
     amend = commit --amend -C HEAD
     ready = rebase -i @{u}
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 
 [push]
     default = current
@@ -53,3 +56,5 @@
     summary = true
 [branch]
     autosetupmerge = true
+[diff]
+    algorithm = patience
