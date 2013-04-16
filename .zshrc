@@ -38,7 +38,7 @@ zstyle :omz:plugins:tmux auto-start on
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git django extract history-substring-search npm python ssh-agent sublime tmux urltools autojump command-not-found virtualenvwrapper)
+plugins=(git django extract history-substring-search npm python ssh-agent sublime tmux urltools autojump command-not-found virtualenvwrapper tux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,5 +59,5 @@ test ~/.bin/z/z.sh && source ~/.bin/z/z.sh
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Run tmux when open terminal
-[[ $TERM = "xterm" ]] && { tmux && exit 0; }
+[[ $TERM = "xterm" ]] && { tmux }
 
