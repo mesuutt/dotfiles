@@ -38,7 +38,7 @@ zstyle :omz:plugins:tmux auto-start on
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git django extract history-substring-search npm python ssh-agent sublime tmux urltools autojump command-not-found virtualenvwrapper tux)
+plugins=(git django extract history-substring-search npm python ssh-agent sublime tmux urltools autojump command-not-found virtualenvwrapper tux git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
