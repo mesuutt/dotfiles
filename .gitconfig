@@ -38,6 +38,9 @@
     lgg = log --graph
     lgf = log --graph --name-only
     lgp = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+
+    # List unpushed commits
+    unpushed = log  --branches  --not --remotes
     standup = log --since '1 day ago' --oneline --author slackermesut@gmail.com
     ann = annotate
     undo = reset --soft HEAD^
@@ -49,7 +52,6 @@
     assume   = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-
 [push]
     default = current
 [merge]
