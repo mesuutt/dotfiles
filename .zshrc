@@ -45,6 +45,8 @@ plugins=(git django extract history-substring-search npm python ssh-agent \
 
 source $ZSH/oh-my-zsh.sh
 
+setopt histignorespace
+
 # Disable auto correct
 unsetopt correct_all
 
@@ -56,8 +58,6 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/.bin
 export WORKON_HOME=$HOME/.envs
 export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-
-#vagrant settings
 export VAGRANT_HOME=/media/mesuutt/devil/Development/os/vagrant/.vagrant.d/
 
 
@@ -73,4 +73,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && { tmux }
 
-export INPUTRC=~/.inputrc
