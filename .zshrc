@@ -41,7 +41,7 @@ zstyle :omz:plugins:tmux auto-start on
 plugins=(git django extract history-substring-search npm python ssh-agent \
     sublime tmux urltools autojump command-not-found virtualenvwrapper tux \
     git-flow zsh-history-substring-search zsh-syntax-highlighting
-    vagrant)
+    vagrant fuzzy-match)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,4 +72,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && { tmux }
-
