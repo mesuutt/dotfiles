@@ -19,7 +19,7 @@
     lgg = log --graph
     lgf = log --graph --name-only
     lgp = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
-
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     # List unpushed commits
     unpushed = log  --branches  --not --remotes
     standup = log --since '1 day ago' --oneline --author slackermesut@gmail.com
@@ -58,3 +58,5 @@
     added = green
     changed = yellow
     untracked = cyan
+
+
