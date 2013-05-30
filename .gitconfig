@@ -52,11 +52,11 @@
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
-    old = red bold
-    new = green bold
+    old = yellow red bold
+    new = yellow green bold
 [color "status"]
-    added = green
-    changed = yellow
-    untracked = cyan
+    added = green reverse
+    changed = yellow reverse
+    untracked = magenta reverse
 
 
