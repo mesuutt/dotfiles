@@ -40,8 +40,7 @@ zstyle :omz:plugins:tmux auto-start on
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git django extract history-substring-search npm python ssh-agent \
     sublime tmux urltools autojump command-not-found virtualenvwrapper tux \
-    git-flow zsh-history-substring-search zsh-syntax-highlighting
-    vagrant fuzzy-match)
+    git-flow zsh-syntax-highlighting vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
