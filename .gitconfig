@@ -34,7 +34,7 @@
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
     unstage = reset HEAD --
-    upmerge = "!f() { git checkout $1 && git pull && git checkout - && git merge $1; }; f"
+    upmerge = "!f() { P1=$1; BRANCH=${P1:=master}; git checkout $BRANCH && git pull origin $BRANCH && git checkout - && git merge $BRANCH; }; f"
 [push]
     default = current
 [merge]
