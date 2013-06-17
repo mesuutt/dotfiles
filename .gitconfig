@@ -33,8 +33,10 @@
     assume   = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-    unstage = reset HEAD --
-    upmerge = "!f() { if [ \"$#\" -eq 1 ];then BR=$1; else R=$1; BR=$2; fi; REMOTE=${R:=origin}; BRANCH=${BR:=master}; git checkout $BRANCH && git pull $REMOTE $BRANCH && git checkout - && git merge $BRANCH; }; f"
+    unstage = reset HEAD
+
+    ;Stage all manually deleted files
+    rm-deleted = "!f() { for x in `git status | grep deleted | awk '{print $3}'`; do git rm $x; done; }; f"
 [push]
     default = current
 [merge]
