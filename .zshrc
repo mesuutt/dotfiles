@@ -40,7 +40,8 @@ zstyle :omz:plugins:tmux auto-start on
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git django extract history-substring-search npm python ssh-agent \
     sublime tmux urltools autojump command-not-found virtualenvwrapper tux \
-    git-flow zsh-syntax-highlighting vagrant)
+    git-flow zsh-syntax-highlighting
+    vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,16 +49,6 @@ setopt histignorespace
 
 # Disable auto correct
 unsetopt correct_all
-
-# Exports
-# Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/.bin
-
-# virtualenvwrapper settings
-export WORKON_HOME=$HOME/.envs
-export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
-export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-export VAGRANT_HOME=/media/mesuutt/devil/Development/os/vagrant/.vagrant.d/
 
 
 #autojump
@@ -71,3 +62,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && { tmux }
+
+
