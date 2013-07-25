@@ -11,10 +11,8 @@ alias lgrep="grep --color -n"
 alias diff='colordiff'
 alias ..='cd ..'
 alias c='clear'
-alias du='du -ch'
-alias df='df -h'
 alias share='python -m SimpleHTTPServer'
-alias halt='sudo halt -p'
+
 
 if [ -f /usr/bin/apt-get ]; then
     alias agu='sudo apt-get update'
