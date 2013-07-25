@@ -60,7 +60,14 @@ test ~/.bin/z/z.sh && source ~/.bin/z/z.sh
 # Load virtualenvwrapper settings
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Kill tmux session and all processes which started in the session
+# when terminal window closed
+alias tmuxn='tmux new-session -s $$'
+_trap_exit() { tmux kill-session -t $$; }
+trap _trap_exit EXIT
+
+
 # Run tmux when open terminal
-[[ $TERM = "xterm" ]] && { tmux }
+[[ $TERM = "xterm" ]] && { tmuxn }
 
 
