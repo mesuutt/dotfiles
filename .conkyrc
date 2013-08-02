@@ -38,9 +38,6 @@ ${color white}$alignc Uptime: ${color white}$uptime
 $color$stippled_hr
 ${color slate grey}CPU: ${color white}${cpu cpu1}% ${cpubar cpu1}
 ${color slate grey}MEM: ${color white}$memperc%  $mem/$memmax $membar
-${color slate grey}CPU0: ${color }${execi 1 sensors|grep "Core 0"|awk '{print $3}'|sed 's/[+]\([0-9.-]*\)°C/\1/'} °C
-${color slate grey}CPU1: ${color }${execi 1 sensors|grep "Core 1"|awk '{print $3}'|sed 's/[+]\([0-9.-]*\)°C/\1/'} °C
-${color slate grey}nVidia GeForce 9600M GT: ${color }${execi 1 nvidia-settings -q gpucoretemp  |grep '):' | cut -c 42-43} °C
 $color$stippled_hr
 ${color slate grey}Highest CPU:
 ${color} ${top name 1} $alignr ${top cpu 1}
@@ -57,12 +54,14 @@ ${color} ${top_mem name 5} $alignr ${top_mem mem 5}
 $color$stippled_hr
 ${color slate grey}File Systems:
  /	 		$alignr		$color${fs_used /} / ${fs_size /} ${fs_bar 7,50 /}
- /home		$alignr		$color${fs_used /home} / ${fs_size /home} ${fs_bar 7,50 /home}${if_mounted /media/DEPO}
- /DEPO 		$alignr		$color${fs_used /media/DEPO} / ${fs_size /media/DEPO} ${fs_bar 7,50 /media/DEPO}$endif${if_mounted /media/CANAVAR}
- /CANAVAR 	$alignr		$color${fs_used /media/CANAVAR} / ${fs_size /media/CANAVAR} ${fs_bar 7,50 /media/CANAVAR}$endif
+ /home		$alignr		$color${fs_used /home} / ${fs_size /home} ${fs_bar 7,50 /home}${if_mounted /mnt/devil}
+ /devil 		$alignr		$color${fs_used /mnt/devil} / ${fs_size /mnt/devil} ${fs_bar 7,50 /mnt/devil}$endif${if_mounted /mnt/devil}
+$color$stippled_hr
+${color slate grey}Recent News:
+${color}${rss http://www.archlinux.org/feeds/news/ 60 item_titles 5 }
 $color$stippled_hr
 ${color slate grey}Recent Package Updates:
-${color}${execi 300 /home/tunix/.arch-packages-news.py &}
+${color}${rss http://www.archlinux.org/feeds/packages/x86_64/ 30 item_titles 10 }
 $color$stippled_hr${if_up eth0}
 ${color slate grey}Ethernet (${addr eth0}):
 ${color}Down: ${downspeed eth0}     Up: ${upspeed eth0}${endif}${if_up eth1}
