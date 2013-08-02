@@ -41,7 +41,7 @@ zstyle :omz:plugins:tmux auto-start on
 plugins=(git django extract history-substring-search npm python ssh-agent \
     sublime tmux urltools autojump command-not-found virtualenvwrapper tux \
     git-flow zsh-syntax-highlighting
-    vagrant)
+    vagrant, archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
