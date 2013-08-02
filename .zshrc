@@ -55,7 +55,10 @@ unsetopt correct_all
 #[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
 
 #z - autojump alternative
-test ~/.bin/z/z.sh && source ~/.bin/z/z.sh
+test ~/.bin/z.sh && source ~/.bin/z.sh
+
+test ~/.bin/functions.sh && source ~/.bin/functions.sh
+
 
 # Load virtualenvwrapper settings
 source /usr/bin/virtualenvwrapper.sh
@@ -66,8 +69,11 @@ alias tmuxn='tmux new-session -s $$'
 _trap_exit() { tmux kill-session -t $$; }
 trap _trap_exit EXIT
 
-
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && { tmuxn }
 
-
+# zsh powerline theme settings https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme
+POWERLINE_HIDE_USER_NAME="true"
+POWERLINE_HIDE_HOST_NAME="true"
+POWERLINE_DETECT_SSH="true"
+POWERLINE_RIGHT_A="exit-status"
