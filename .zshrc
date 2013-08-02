@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="tux"
+ZSH_THEME="powerline"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -58,7 +58,7 @@ unsetopt correct_all
 test ~/.bin/z/z.sh && source ~/.bin/z/z.sh
 
 # Load virtualenvwrapper settings
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
