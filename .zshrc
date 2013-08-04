@@ -50,10 +50,6 @@ setopt histignorespace
 # Disable auto correct
 unsetopt correct_all
 
-
-#autojump
-#[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
-
 #z - autojump alternative
 test ~/.bin/z.sh && source ~/.bin/z.sh
 
