@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+export EDITOR=/usr/bin/vim
 # teamocil: tmux session manager
 export TEAMOCIL_PATH=$HOME/.tmux/teamocil/
 compctl -g '~/.tmux/teamocil/*(:t:r)' teamocil
