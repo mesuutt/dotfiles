@@ -8,6 +8,10 @@ compctl -g '~/.tmux/teamocil/*(:t:r)' teamocil
 export WORKON_HOME=$HOME/.envs
 export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+# Should be sourced after env variables, so in this file
+source /usr/bin/virtualenvwrapper.sh
+
 export VAGRANT_HOME=/media/mesuutt/devil/Development/os/vagrant/.vagrant.d/
 
 
