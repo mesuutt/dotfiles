@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=/home/mesuutt/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,7 +61,7 @@ test ~/.bin/functions.sh && source ~/.bin/functions.sh
 
 
 # Load virtualenvwrapper settings
-source /usr/bin/virtualenvwrapper.sh
+# Moved to .zshenv
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
