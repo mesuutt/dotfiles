@@ -6,7 +6,6 @@ export TEAMOCIL_PATH=$HOME/.tmux/teamocil/
 compctl -g '~/.tmux/teamocil/*(:t:r)' teamocil
 
 # virtualenvwrapper settings
-export WORKON_HOME=$HOME/.envs
 export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
