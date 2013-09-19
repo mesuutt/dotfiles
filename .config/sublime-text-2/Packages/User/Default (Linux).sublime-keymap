@@ -1,0 +1,21 @@
+[
+    { "keys": ["ctrl+enter"], "command": "ipython_exec" },
+    { "keys": ["f5"], "command": "ipython_exec_file" },
+    { "keys": ["ctrl+k","ctrl+m"], "command": "toggle_minimap" },
+    { "keys": ["ctrl+3"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} }, // Default ";" but not working on linux
+
+    //S*** SidebarEnhancement shortcuts
+    { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+    { "keys": ["f3"], "command": "side_bar_rename" },
+    { "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" },
+    //F*** SidebarEnhancement shortcuts
+    {"keys": ["ctrl+shift+r"], "command": "reindent" , "args": {"single_line": false}},
+
+    { "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } },
+
+
+    // On My samsung laptop pressing to home and end button hard.
+    { "keys": ["alt+b"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+    { "keys": ["alt+e"], "command": "move_to", "args": {"to": "eof", "extend": false} }
+]
