@@ -1,12 +1,20 @@
 {
 	"installed_packages":
 	[
-		"Djaneiro",
+		"AdvancedNewFile",
 		"Emmet",
 		"GitGutter",
+		"GotoOpenFile",
 		"Package Control",
 		"Python Flake8 Lint",
 		"SideBarEnhancements",
-		"Theme - Soda"
+		"SnippetMaker",
+		"SublimeCodeIntel",
+		"Theme - Soda",
+		"WakaTime"
+	],
+	"repositories":
+	[
+		"https://github.com/mesuutt/Djaneiro"
 	]
 }

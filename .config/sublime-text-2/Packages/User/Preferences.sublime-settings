@@ -48,7 +48,8 @@
 		"CACHE",
 		"*.egg-info",
 		"*.egg",
-		".vagrant"
+		".vagrant",
+		"logs"
 	],
 	"font_face": "Ubuntu Mono",
 	"font_size": 9.5,
