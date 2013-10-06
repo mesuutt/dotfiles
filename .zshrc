@@ -54,6 +54,7 @@ unsetopt correct_all
 test ~/.bin/z.sh && source ~/.bin/z.sh
 
 test ~/.bin/functions.sh && source ~/.bin/functions.sh
+test ~/.bin/aliases.zsh && source ~/.bin/functions.zsh
 
 
 # Load virtualenvwrapper settings
