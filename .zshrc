@@ -53,8 +53,8 @@ unsetopt correct_all
 #z - autojump alternative
 test ~/.bin/z.sh && source ~/.bin/z.sh
 
-test ~/.bin/functions.sh && source ~/.bin/functions.sh
-test ~/.bin/aliases.zsh && source ~/.bin/functions.zsh
+test ~/.bin/functions.zsh && source ~/.bin/functions.zsh
+test ~/.bin/aliases.zsh && source ~/.bin/aliases.zsh
 
 
 # Load virtualenvwrapper settings
