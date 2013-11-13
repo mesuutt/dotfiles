@@ -10,7 +10,7 @@ export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 
-export VAGRANT_HOME=/media/mesuutt/devil/Development/os/vagrant/.vagrant.d/
+export VAGRANT_HOME=~/files/vagrant/.vagrant.d/
 
 
 if [ -d $HOME/.bin ]; then
@@ -19,6 +19,8 @@ fi
 
 # Set PATH/path to be unique
 typeset -U path
+
+export PATH
 
 
 # Colorful man pages
