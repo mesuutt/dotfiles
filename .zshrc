@@ -50,11 +50,12 @@ setopt histignorespace
 # Disable auto correct
 unsetopt correct_all
 
-#z - autojump alternative
-test ~/.bin/z.sh && source ~/.bin/z.sh
+test ~/.scripts/functions.zsh && source ~/.scripts/functions.zsh
+test ~/.aliases.zsh && source ~/.aliases.zsh
 
-test ~/.bin/functions.zsh && source ~/.bin/functions.zsh
-test ~/.bin/aliases.zsh && source ~/.bin/aliases.zsh
+#z - autojump alternative
+test ~/.scripts/z.sh && source ~/.scripts/z.sh
+
 
 
 # Load virtualenvwrapper settings
