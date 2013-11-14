@@ -52,6 +52,7 @@ unsetopt correct_all
 
 test ~/.scripts/functions.zsh && source ~/.scripts/functions.zsh
 test ~/.aliases.zsh && source ~/.aliases.zsh
+test ~/.local.zsh && source ~/.local.zsh
 
 #z - autojump alternative
 test ~/.scripts/z.sh && source ~/.scripts/z.sh
