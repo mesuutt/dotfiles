@@ -23,7 +23,7 @@
     sl = stash list
     # List unpushed commits
     unpushed = log  --branches  --not --remotes
-    standup = log --since '1 day ago' --oneline --author slackermesut@gmail.com
+    standup = !git log --since='1 day ago' --oneline --author="$(git config user.email)"
     ann = annotate
     undo = reset --soft HEAD^
     sshow = "!f() { git stash show stash^{/$*}; }; f"
