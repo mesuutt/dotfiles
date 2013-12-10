@@ -1,0 +1,10 @@
+{
+        "scope": "source.python",
+
+        "completions":
+        [
+                { "trigger": "ldebug", "contents": "logger.debug($0)" }
+                { "trigger": "linfo", "contents": "logger.info($0)" }
+                { "trigger": "lerror", "contents": "logger.error($0)" }
+        ]
+}
