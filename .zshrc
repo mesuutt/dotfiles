@@ -64,7 +64,7 @@ test ~/.scripts/z.sh && source ~/.scripts/z.sh
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
-alias tmuxn='tmux new-session -s $$'
+alias -g tmuxn='ssh-agent tmux new-session -s $$'
 _trap_exit() { tmux kill-session -t $$; }
 trap _trap_exit EXIT
 
