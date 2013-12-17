@@ -38,10 +38,41 @@ zstyle :omz:plugins:tmux auto-start on
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git django extract history-substring-search npm python ssh-agent \
-    sublime tmux urltools autojump command-not-found virtualenvwrapper tux \
-    git-flow zsh-syntax-highlighting
-    vagrant, archlinux)
+plugins=(
+    bower,
+    brew,
+    coffee,
+    colored-man,
+    command-not-found,
+    copydir,
+    copyfile,
+    cp,
+    debian,
+    django,
+    docker,
+    encode64,
+    extract,
+    git,
+    git-flow,
+    history-substring-search,
+    jump,
+    mosh,
+    motd,
+    npm,
+    pip,
+    profiles,
+    python,
+    redis-cli,
+    rsync,
+    ssh-agent,
+    sublime,
+    svn,
+    tmux,
+    tux,
+    urltools,
+    vagrant,
+    virtualenvwrapper
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,19 +88,19 @@ test ~/.local.zsh && source ~/.local.zsh
 #z - autojump alternative
 test ~/.scripts/z.sh && source ~/.scripts/z.sh
 
-
+xmodmap $HOME/.Xmodmap
 
 # Load virtualenvwrapper settings
 # Moved to .zshenv
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
-alias -g tmuxn='ssh-agent tmux new-session -s $$'
+alias -g tmuxn='tmux new-session -s $$'
 _trap_exit() { tmux kill-session -t $$; }
 trap _trap_exit EXIT
 
 # Run tmux when open terminal
-[[ $TERM = "xterm" ]] && { tmuxn }
+[[ $TERM = "xterm" ]] && tmuxn
 
 # zsh powerline theme settings https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme
 POWERLINE_HIDE_USER_NAME="true"
