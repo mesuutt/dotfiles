@@ -1,0 +1,33 @@
+" Pentadactylrc, (initially) mostly stolen from sjl.
+
+loadplugins '\.(js|penta)$'
+group user
+
+" vim: set ft=pentadactyl:
+
+" Yank (copy) to default clipboard with Y {{{
+js editor.defaultRegister="+"
+
+" Best GUI widgets are ones that are not.
+set showtabline=never
+set guioptions=s
+
+" Highlight all search matches, not just the first.
+set hlfind
+
+nmap -builtin -silent j 3j
+nmap -builtin -silent k 3k
+
+" Switch tabs with parens
+nmap -builtin ) :tn<CR>
+nmap -builtin ( :tp<CR>
+
+nmap -builtin < :back<cr>
+nmap -builtin > :forward<cr>
+
+nmap -builtin p :pageinfo<cr>
+
+" Add crap to pocket.
+nmap -builtin P :execute "!(echo " + content.location.href + " | mail -s '' add@getpocket.com) || (Failed; exit 1)"<cr>
+
+
