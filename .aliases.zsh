@@ -7,6 +7,7 @@ alias git='noglob git'
 alias find='noglob find'
 alias pip='noglob pip'
 
+alias gap='git add -p'
 
 # Arch linux specific aliases
 alias y='yaourt'
