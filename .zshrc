@@ -40,7 +40,6 @@ zstyle :omz:plugins:tmux auto-start on
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     bower,
-    brew,
     coffee,
     colored-man,
     command-not-found,
