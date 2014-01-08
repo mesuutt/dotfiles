@@ -142,8 +142,15 @@ bar {
   position top
   status_command i3status
   font pango:Lekton Regular 11
+  # font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
   colors {
-    background #223139
+     #background #000000
+     # statusline #ffffff
+
+     focused_workspace  #4c7899 #285577 #ffffff
+     active_workspace   #333333 #5f676a #ffffff
+     inactive_workspace #333333 #222222 #888888
+     urgent_workspace   #2f343a #900000 #ffffff
   }
 }
 
