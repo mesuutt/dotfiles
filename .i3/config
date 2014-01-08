@@ -194,3 +194,10 @@ mode "focused" {
 }
 
 bindsym $mod+n mode "focused"
+
+# Assign multimedia keys for volume 
+# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
