@@ -94,9 +94,9 @@ xmodmap $HOME/.Xmodmap
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
-alias -g tmuxn='tmux new-session -s $$'
-_trap_exit() { tmux kill-session -t $$; }
-trap _trap_exit EXIT
+alias -g tmuxn='tmux -2 new-session -s $$'
+_kill_tmux_session() { tmux kill-session -t $$; }
+trap _kill_tmux_session EXIT
 
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && tmuxn
