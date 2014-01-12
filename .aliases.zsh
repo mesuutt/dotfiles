@@ -12,4 +12,3 @@ alias gap='git add -p'
 # Arch linux specific aliases
 alias y='yaourt'
 
-alias mongoshell='mongo ~/.mongoshell.js --shell'
