@@ -39,37 +39,17 @@ zstyle :omz:plugins:tmux auto-start on
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-    bower,
-    coffee,
-    colored-man,
-    command-not-found,
-    copydir,
-    copyfile,
-    cp,
-    debian,
-    django,
-    docker,
-    encode64,
-    extract,
-    git,
-    git-flow,
-    history-substring-search,
-    jump,
-    mosh,
-    motd,
-    npm,
-    pip,
-    profiles,
-    python,
-    redis-cli,
-    rsync,
-    ssh-agent,
-    sublime,
-    svn,
-    tmux,
-    tux,
-    urltools,
-    vagrant,
+    cp
+    docker
+    git
+    git-flow
+    history-substring-search
+    npm
+    pip
+    redis-cli
+    ssh-agent
+    tmux
+    vagrant
     virtualenvwrapper
 )
 
