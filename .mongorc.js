@@ -1,6 +1,3 @@
-// Mongo shell does not have configuration file.
-// So I create this and assign an alias for execute this when start new shell
-// Example: alias mongoshell='mongo ~/.mongoshell.js --shell'
 
 prompt = function() {
     return db.getName() + '> '
