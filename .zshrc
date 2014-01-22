@@ -60,9 +60,9 @@ setopt histignorespace
 # Disable auto correct
 unsetopt correct_all
 
-test ~/.scripts/functions.zsh && source ~/.scripts/functions.zsh
-test ~/.aliases.zsh && source ~/.aliases.zsh
-test ~/.local.zsh && source ~/.local.zsh
+test ~/.scripts/functions.sh && source ~/.scripts/functions.sh
+test ~/.aliases.sh && source ~/.aliases.sh
+test ~/.local.sh && source ~/.local.sh
 
 #z - autojump alternative
 test ~/.scripts/z.sh && source ~/.scripts/z.sh
