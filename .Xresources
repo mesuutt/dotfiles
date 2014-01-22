@@ -1,4 +1,5 @@
 ! http://awesome.naquadah.org/wiki/Urxvt
+! Reload changes: xrdb ~/.Xresources
 
 ! General
  !urxvt*termName:  rxvt-256color
