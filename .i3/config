@@ -24,7 +24,7 @@ bindsym $mod+minus exec i3 move scratchpad
 bindsym $mod+Shift+minus exec i3 scratchpad show
 
 # start a terminal
-#bindsym $mod+Return exec ~/.dotfiles/term
+# bindsym $mod+Return exec ~/.dotfiles/term
 bindsym $mod+Return exec i3-sensible-terminal 
 
 # kill focused window
