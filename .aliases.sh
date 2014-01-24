@@ -12,3 +12,8 @@ alias gap='git add -p'
 # Arch linux specific aliases
 alias y='yaourt'
 alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeeper post-install'
+
+
+alias vup="vagrant up"
+alias vsh="vagrant ssh"
+alias vsp="vagrant suspend"
