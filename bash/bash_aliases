@@ -1,3 +1,8 @@
+
+# Load common sh aliases
+test ~/.aliases.sh && source ~/.aliases.sh
+
+
 if [[ $(uname) == "Linux" ]]; then
     alias ls="ls --color"
 else
@@ -57,9 +62,6 @@ alias l2tr="export LANG=tr_TR.UTF-8; export LC_ALL=tr_TR.UTF-8; export LANGUAGE=
 
 # Use console instead of GUI for Emacs
 alias emacs="emacs -nw"
-
-# yaourt
-alias y="yaourt"
 
 # virsh
 alias virsh="virsh -c qemu:///system"
