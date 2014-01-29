@@ -20,6 +20,7 @@ bash:
 zsh:
 	-mv $(HOME)/.zshrc{,.old}
 	-mv $(HOME)/.zshenv{,.old}
+	-mv $(HOME)/.zsh_aliases{,.old}
 	ln -svf `pwd`/zsh/zshrc $(HOME)/.zshrc
 	ln -svf `pwd`/zsh/zshenv $(HOME)/.zshenv
 	ln -svf `pwd`/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
@@ -52,6 +53,7 @@ clean:
 	-rm -ri $(HOME)/.bash_aliases.old
 	-rm -ri $(HOME)/.zshrc.old
 	-rm -ri $(HOME)/.zshenv.old
-	-rm -ri $(HOME)/.i5_old
+	-rm -ri $(HOME)/.i3_old
 	-rm -ri $(HOME)/.i3status.conf.old
 	-rm -ri $(HOME)/.scripts_old
+	-rm -ri $(HOME)/.zsh_aliases.old
