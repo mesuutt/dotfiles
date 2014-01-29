@@ -23,7 +23,7 @@ zsh:
 	ln -svf `pwd`/zsh/zshrc $(HOME)/.zshrc
 	ln -svf `pwd`/zsh/zshenv $(HOME)/.zshenv
 	ln -svf `pwd`/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
-
+	ln -svf `pwd`/zsh/zsh_aliases $(HOME)/.zsh_aliases
 
 bin:
 	-mkdir $(HOME)/.bin
