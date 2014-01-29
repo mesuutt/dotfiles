@@ -1,19 +1,19 @@
 #!/usr/bin/env sh
 
-alias h='howdoi'
+# Common shell free aliases.
 
-alias http='noglob http'
-alias git='noglob git'
-alias find='noglob find'
-alias pip='noglob pip'
+alias h='howdoi'
 
 alias gap='git add -p'
 
-# Arch linux specific aliases
-alias y='yaourt'
 alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeeper post-install'
 
+alias y='yaourt'
 
 alias vup="vagrant up"
 alias vsh="vagrant ssh"
 alias vsp="vagrant suspend"
+
+gp(){
+    ps -aux | grep "$@";
+}
