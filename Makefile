@@ -4,9 +4,8 @@ init:
 	git submodule init
 	git submodule update
 
-install: init zsh  vim \
-		 other-dots bin i3
-	echo 'run `make clean` if everything is fine'
+install: init zsh  vim other-dots bin i3
+	echo -e "\n\n run 'make clean' if everything is fine\n"
 
 bash:
 	-mv $(HOME)/.bashrc{,.old}
@@ -53,7 +52,7 @@ clean:
 	-rm -ri $(HOME)/.bash_aliases.old
 	-rm -ri $(HOME)/.zshrc.old
 	-rm -ri $(HOME)/.zshenv.old
+	-rm -ri $(HOME)/.zsh_aliases.old
 	-rm -ri $(HOME)/.i3_old
 	-rm -ri $(HOME)/.i3status.conf.old
 	-rm -ri $(HOME)/.scripts_old
-	-rm -ri $(HOME)/.zsh_aliases.old
