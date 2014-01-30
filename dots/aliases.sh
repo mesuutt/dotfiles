@@ -14,6 +14,6 @@ alias vup="vagrant up"
 alias vsh="vagrant ssh"
 alias vsp="vagrant suspend"
 
-gp(){
-    ps -aux | grep "$@";
+psg(){
+    ps -aux | grep "$*";
 }
