@@ -51,6 +51,7 @@ plugins=(
     tmux
     vagrant
     virtualenvwrapper
+    extract
 )
 
 source $ZSH/oh-my-zsh.sh
