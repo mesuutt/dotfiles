@@ -2,22 +2,30 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"Djaneiro",
 		"Emmet",
+		"Gist",
 		"GitGutter",
 		"GotoOpenFile",
+		"isort",
+		"Jade",
+		"JavaScript & NodeJS Snippets",
+		"jQuery Snippets pack",
+		"LESS",
 		"Package Control",
 		"PlainTasks",
 		"Pretty JSON",
 		"Python Flake8 Lint",
-		"Python Imports Sorter",
 		"SideBarEnhancements",
 		"SnippetMaker",
+		"Solarized Color Scheme",
 		"SublimeCodeIntel",
 		"Theme - Soda",
+		"Theme - Spacegray",
 		"WakaTime"
 	],
 	"repositories":
 	[
-		"https://github.com/mesuutt/Djaneiro"
+		"https://github.com/mesuutt/Djaneiro/tree/mesuutt"
 	]
 }
