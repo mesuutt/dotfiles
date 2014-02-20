@@ -53,7 +53,7 @@
  urxvt*color2:      #00AA00
  urxvt*color3:      #FFFF00
  ! blue + purple
- urxvt*color4:      #112037
+ urxvt*color4:      RoyalBlue
  urxvt*color5:      #A020F0
  ! cyan + white
  urxvt*color6:      #5B5BC7
@@ -65,7 +65,7 @@
  urxvt*color10:     #90EE90
  urxvt*color11:     #ffff2f
  ! bright-blue + bright-purple
- urxvt*color12:     #5B5BC7
+ urxvt*color12:     RoyalBlue
  urxvt*color13:     #e628ba
  ! bright-cyan + bright-white
  urxvt*color14:     #7D7DFB
