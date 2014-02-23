@@ -1,4 +1,4 @@
-HOME=/home/mesuutt
+
 
 init: 
 	git submodule init
