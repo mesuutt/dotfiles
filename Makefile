@@ -4,7 +4,7 @@ init:
 	git submodule init
 	git submodule update
 
-install: init zsh  vim others bin i3 scripts
+install: init zsh  vim others bin scripts
 	echo -e "\n\n 'make clean' if everything is fine\n"
 
 clean: clean-bash clean-zsh clean-i3 clean-scripts
