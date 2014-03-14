@@ -61,11 +61,11 @@ setopt histignorespace
 # Disable auto correct
 unsetopt correct_all
 
-test ~/.zsh_aliases && source ~/.zsh_aliases
-test ~/.local.sh && source ~/.local.sh
+test -f ~/.zsh_aliases && source ~/.zsh_aliases
+test -f ~/.local.sh && source ~/.local.sh
 
 #z - autojump alternative
-test ~/.scripts/z.sh && source ~/.scripts/z.sh
+test -f ~/.scripts/z.sh && source ~/.scripts/z.sh
 
 xmodmap $HOME/.Xmodmap
 
