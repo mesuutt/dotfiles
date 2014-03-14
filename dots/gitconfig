@@ -21,8 +21,13 @@
     lgp = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     sl = stash list
+    
+    # List unpushed commit on current branch
+    # http://stackoverflow.com/q/2016901/1027507
+    lsu = log @{u}..
     # List unpushed commits
-    unpushed = log  --branches  --not --remotes
+    lsup = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+    
     standup = !git log --since='1 day ago' --oneline --author="$(git config user.email)"
     ann = annotate
     undo = reset --soft HEAD^
