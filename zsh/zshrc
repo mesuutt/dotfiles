@@ -74,15 +74,10 @@ xmodmap $HOME/.Xmodmap
 
 # Kill tmux session and all processes which started in the session
 # when terminal window closed
-alias -g tmuxn='tmux -2 new-session -s $$'
-_kill_tmux_session() { tmux kill-session -t $$; }
-trap _kill_tmux_session EXIT
+#alias -g tmuxn='tmux -2 new-session -s $$'
+#_kill_tmux_session() { tmux kill-session -t $$; }
+#trap _kill_tmux_session EXIT
 
 # Run tmux when open terminal
 [[ $TERM = "xterm" ]] && tmuxn
 
-# zsh powerline theme settings https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme
-POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_DETECT_SSH="true"
-POWERLINE_RIGHT_A="exit-status"
