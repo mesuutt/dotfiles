@@ -42,3 +42,10 @@ endif
 
 filetype plugin on
 syn on
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'gmarik/vundle'
+
+Plugin 'dag/vim2hs'
