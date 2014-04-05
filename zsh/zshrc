@@ -24,7 +24,7 @@ ZSH_THEME="bira"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # ssh-agent forwarding
 zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -52,6 +52,7 @@ plugins=(
     vagrant
     virtualenvwrapper
     extract
+    tux
 )
 
 source $ZSH/oh-my-zsh.sh

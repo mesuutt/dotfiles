@@ -20,3 +20,4 @@ alias t="todo.sh"
 psg(){
     ps -aux | grep "$*";
 }
+
