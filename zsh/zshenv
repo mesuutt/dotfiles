@@ -14,7 +14,11 @@ export VAGRANT_HOME=~/files/vagrant/.vagrant.d/
 
 
 if [ -d $HOME/.bin ]; then
-   path+=($HOME/.bin)
+    path+=($HOME/.bin)
+fi
+
+if [ -d $HOME/.cabal/bin ]; then
+    path+=($HOME/.cabal/bin)
 fi
 
 # Set PATH/path to be unique
