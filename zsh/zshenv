@@ -42,4 +42,4 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 export TODOTXT_CFG_FILE="$HOME/todo.cfg"
 export LESS=-RFX
 
-
+export PURE_GIT_PULL=0 # Dont check whenever git remote updated
