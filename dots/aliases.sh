@@ -13,8 +13,9 @@ alias y='yaourt'
 alias vup="vagrant up"
 alias vsh="vagrant ssh"
 alias vsp="vagrant suspend"
-alias vss="vagrant status"
+alias vst="vagrant status"
 alias vsr="vagrant reload"
+
 alias t="todo.sh"
 
 psg(){
