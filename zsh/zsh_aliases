@@ -9,5 +9,5 @@ alias git='noglob git'
 alias find='noglob find'
 alias pip='noglob pip'
 
-alias -g c="xclip -selection clipboard"
+alias -g xc='xclip -selection clipboard'
 
