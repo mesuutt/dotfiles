@@ -142,7 +142,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-  status_command py3status -c ~/.i3/i3status.conf
+  status_command i3status -c ~/.i3/i3status.conf
   font pango:Lekton Regular 11
   # font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
   colors {
