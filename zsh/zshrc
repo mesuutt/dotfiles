@@ -80,5 +80,5 @@ xmodmap $HOME/.Xmodmap
 #trap _kill_tmux_session EXIT
 
 # Run tmux when open terminal
-[[ $TERM = "xterm" ]] && tmuxn
+[[ $TERM = "xterm-256color" ]] && tmux
 
