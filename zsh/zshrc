@@ -82,3 +82,10 @@ xmodmap $HOME/.Xmodmap
 # Run tmux when open terminal
 [[ $TERM = "xterm-256color" ]] && tmux
 
+# COMPLETION SETTINGS
+# add custom completion scripts
+fpath=(~/.dotfiles/zsh/completions $fpath) 
+#  
+# compsys initialization
+autoload -U compinit
+compinit
