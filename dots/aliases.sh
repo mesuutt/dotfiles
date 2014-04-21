@@ -5,7 +5,7 @@
 alias h='howdoi'
 
 alias gap='git add -p'
-
+alias gn="git annex"
 alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeeper post-install'
 
 alias y='yaourt'

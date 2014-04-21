@@ -69,3 +69,5 @@
     untracked = magenta reverse
 
 
+[rebase]
+	autosquash = true
