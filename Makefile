@@ -1,6 +1,6 @@
 
 
-init: 
+init:
 	git submodule init
 	git submodule update
 
@@ -23,7 +23,7 @@ clean-bash:
 	-rm -ri $(HOME)/.bashrc.old
 	-rm -ri $(HOME)/.bash_profile.old
 	-rm -ri $(HOME)/.bash_aliases.old
-	
+
 
 zsh: backup-zsh
 	ln -svf `pwd`/zsh/zshrc $(HOME)/.zshrc
@@ -44,7 +44,7 @@ clean-zsh:
 vim:
 	ln -svf vim/vim $(HOME)/.vim
 	ln -svf vim/vimrc $(HOME)/.vimrc
-	
+
 
 bin:
 	-mkdir $(HOME)/.bin
@@ -61,7 +61,7 @@ backup-i3:
 clean-i3:
 	-rm -ri $(HOME)/.i3_old
 	-rm -ri $(HOME)/.i3status.conf.old
-	
+
 
 scripts:
 	-mv $(HOME)/.scripts{,_old}
@@ -73,3 +73,28 @@ clean-scripts:
 others:
 	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
 
+
+define HELP
+
+
+@echo List of commands
+@echo ================
+@echo init:
+@echo install: init zsh vim bin sciprts others
+@echo clean: clean-bash clean-zsh clean-i3 clean-scripts
+@echo backup: backup-bash backup-zsh backup-i3
+@echo zsh: backup-zsh
+@echo vim:
+@echo bin:
+@echo i3:
+@echo scripts:
+@echo others:
+@echo i3: backup-i3
+@echo clean-bash:
+@echo clean-zsh:
+@echo clean-i3:
+@echo clean-scripts:
+endef
+
+help:
+	echo ${HELP}
