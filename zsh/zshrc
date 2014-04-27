@@ -68,24 +68,17 @@ test -f ~/.local.sh && source ~/.local.sh
 #z - autojump alternative
 test -f ~/.scripts/z.sh && source ~/.scripts/z.sh
 
-xmodmap $HOME/.Xmodmap
-
-# Load virtualenvwrapper settings
-# Moved to .zshenv
-
-# Kill tmux session and all processes which started in the session
-# when terminal window closed
-#alias -g tmuxn='tmux -2 new-session -s $$'
-#_kill_tmux_session() { tmux kill-session -t $$; }
-#trap _kill_tmux_session EXIT
-
 # Run tmux when open terminal
 [[ $TERM = "xterm-256color" ]] && tmux
 
 # COMPLETION SETTINGS
 # add custom completion scripts
 fpath=(~/.dotfiles/zsh/completions $fpath) 
-#  
+
 # compsys initialization
 autoload -U compinit
 compinit
+
+type hub > /dev/null 2>&1 && {
+    eval "$(hub alias -s)"
+}
