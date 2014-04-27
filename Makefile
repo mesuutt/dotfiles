@@ -1,5 +1,3 @@
-
-
 init:
 	git submodule init
 	git submodule update
@@ -76,13 +74,13 @@ others:
 
 define HELP
 
-
 @echo List of commands
 @echo ================
 @echo init:
 @echo install: init zsh vim bin sciprts others
-@echo clean: clean-bash clean-zsh clean-i3 clean-scripts
 @echo backup: backup-bash backup-zsh backup-i3
+@echo clean: clean-bash clean-zsh clean-i3 clean-scripts
+@echo
 @echo zsh: backup-zsh
 @echo vim:
 @echo bin:
