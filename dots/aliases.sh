@@ -15,6 +15,7 @@ alias vsh="vagrant ssh"
 alias vsp="vagrant suspend"
 alias vst="vagrant status"
 alias vsr="vagrant reload"
+alias vht="vagrant halt"
 
 alias t="todo.sh"
 
