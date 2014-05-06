@@ -25,5 +25,19 @@ nmap -builtin ( :tp<CR>
 nmap -builtin < :back<cr>
 nmap -builtin > :forward<cr>
 
+" Map ctrl-[xcvwf] for copy paste etc.
+" http://superuser.com/a/372496/119949
+" Normal Mode Mappings
+nnoremap <C-f> /
+nnoremap <C-w> :tabclose<CR>
+nnoremap <C-c> <C-v><C-c>
+nnoremap <C-v> <C-v><C-v>
+nnoremap <C-x> <C-v><C-x>
+
+" Insert Mode Mappings
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+inoremap <C-x> <C-v><C-x>
+
 " Save to Pocket
 command! pocket -description "Save to Pocket" open javascript:(function(){ISRIL_H='d862';PKT_D='getpocket.com';ISRIL_SCRIPT=document.createElement('SCRIPT');ISRIL_SCRIPT.type='text/javascript';ISRIL_SCRIPT.src='http://'+PKT_D+'/b/r.js';document.getElementsByTagName('head')[0].appendChild(ISRIL_SCRIPT)})();
