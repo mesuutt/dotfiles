@@ -41,7 +41,6 @@ clean-zsh:
 
 vim:
 	ln -svf vim/vim $(HOME)/.vim
-	ln -svf vim/vimrc $(HOME)/.vimrc
 	
 	vim +PluginInstall +qall
 
