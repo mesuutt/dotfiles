@@ -8,6 +8,6 @@ alias http='noglob http'
 alias git='noglob git'
 alias find='noglob find'
 alias pip='noglob pip'
-
 alias -g xc='xclip -selection clipboard'
 
+alias youtube-dl='noglob youtube-dl'
