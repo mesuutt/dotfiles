@@ -47,5 +47,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'dag/vim2hs'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
