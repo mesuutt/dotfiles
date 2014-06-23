@@ -3,7 +3,7 @@ init:
 	git submodule update
 
 install: init zsh  vim others bin scripts
-	echo -e "\n\n 'make clean' if everything working fine\n"
+	source ~/.zshrc
 
 clean: clean-bash clean-zsh clean-i3 clean-scripts
 
