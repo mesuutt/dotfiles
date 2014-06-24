@@ -7,6 +7,7 @@
     editor = vim
     excludesfile = ~/.gitignore
     autocrlf = false
+    filemode = false 
 [alias]
     st = status
     ci = commit
