@@ -30,6 +30,7 @@ typeset -U path
 
 export PATH
 
+fpath=(~/.dotfiles/zsh/additional-zsh-completions/src $fpath)
 fpath=(~/.oh-my-zsh/custom/completions $fpath)
 
 # Colorful man pages
@@ -47,3 +48,7 @@ export TODOTXT_CFG_FILE="$HOME/todo.cfg"
 export LESS=-RFX
 
 export PURE_GIT_PULL=0 # Dont check whenever git remote updated
+
+# https://github.com/jahendrie/cheat
+export CHEATPATH=~/.cheats:/usr/share/cheat/sheets
+
