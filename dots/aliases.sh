@@ -23,6 +23,8 @@ alias t="todo.sh"
 alias acp="/usr/local/bin/cp -g"
 alias amv="/usr/local/bin/mv -g"
 
+alias cheat="python3 /usr/bin/cheat"
+
 psg(){
     ps -aux | grep "$*";
 }
