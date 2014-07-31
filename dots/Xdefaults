@@ -37,7 +37,7 @@
  !  - use xft for drawing fonts
  urxvt*font:       xft:Terminus:18
  !  - cursor
- urxvt*cursorColor: #DCDCCC
+ urxvt*cursorColor: #4df403
  !  - pseudo transparency
  !urxvt*shading:    50
  !urxvt*transparent:true

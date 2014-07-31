@@ -19,9 +19,12 @@ alias vht="vagrant halt"
 
 alias t="todo.sh"
 
+alias cp="cp --preserve=all"
+
 # Advenced copy. Show progressbar while copiying/moving files
 alias acp="/usr/local/bin/cp -g"
 alias amv="/usr/local/bin/mv -g"
+
 
 psg(){
     ps -aux | grep "$*";
