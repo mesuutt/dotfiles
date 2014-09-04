@@ -40,13 +40,13 @@ clean-zsh:
 	-rm -ri $(HOME)/.zsh_aliases.old
 
 vim:
-	ln -svf vim/vim $(HOME)/.vim
+	ln -svf `pwd`/vim $(HOME)/.vim
 	
 	vim +PluginInstall +qall
 
 bin:
 	-mkdir $(HOME)/.bin
-	ln -svf bin $(HOME)/.bin
+	ln -svf `pwd`/bin $(HOME)/.bin
 
 i3: backup-i3
 	ln -svf `pwd`/i3 $(HOME)/.i3
@@ -75,6 +75,7 @@ others:
 define HELP
 
 @echo List of commands
+
 @echo ================
 @echo init:
 @echo install: init zsh vim bin sciprts others
