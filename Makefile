@@ -2,10 +2,10 @@ init:
 	git submodule init
 	git submodule update
 
-install: init zsh  vim others bin scripts
+install: init zsh  vim others bin
 	source ~/.zshrc
 
-clean: clean-bash clean-zsh clean-i3 clean-scripts
+clean: clean-bash clean-zsh clean-i3
 
 bash: backup-bash
 	ln -svf `pwd`/bash/bashrc $(HOME)/.bashrc
@@ -60,16 +60,11 @@ clean-i3:
 	-rm -ri $(HOME)/.i3_old
 	-rm -ri $(HOME)/.i3status.conf.old
 
-
-scripts:
-	-mv $(HOME)/.scripts{,_old}
-	ln -svf `pwd`/scripts $(HOME)/.scripts
-
-clean-scripts:
-	-rm -ri $(HOME)/.scripts_old
-
 others:
 	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
+	
+	-unlink $(HOME)/.scripts
+	ln -svf `pwd`/scripts $(HOME)/.scripts
 
 
 define HELP
@@ -78,21 +73,19 @@ define HELP
 
 @echo ================
 @echo init:
-@echo install: init zsh vim bin sciprts others
+@echo install: init zsh vim bin others
 @echo backup: backup-bash backup-zsh backup-i3
-@echo clean: clean-bash clean-zsh clean-i3 clean-scripts
+@echo clean: clean-bash clean-zsh clean-i3
 @echo
 @echo zsh: backup-zsh
 @echo vim:
 @echo bin:
 @echo i3:
-@echo scripts:
 @echo others:
 @echo i3: backup-i3
 @echo clean-bash:
 @echo clean-zsh:
 @echo clean-i3:
-@echo clean-scripts:
 endef
 
 help:
