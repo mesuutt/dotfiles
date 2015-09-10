@@ -82,3 +82,7 @@ compinit
 type hub > /dev/null 2>&1 && {
     eval "$(hub alias -s)"
 }
+
+source ~/.zshenv
+
+umask 077 # Anybody can't rwx my created files
