@@ -31,7 +31,6 @@ typeset -U path
 export PATH
 
 fpath=(~/.dotfiles/zsh/additional-zsh-completions/src $fpath)
-fpath=(~/.oh-my-zsh/custom/completions $fpath)
 
 # Colorful man pages
 # Ertug Karamatli <ertug@karamatli.com>  http://wiki.clug.org.za/wiki/Colour_on_the_command_line
