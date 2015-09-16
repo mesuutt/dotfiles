@@ -28,14 +28,12 @@
  urxvt*urlLauncher:     /usr/bin/firefox
  urxvt*matcher.button:  1
  !  - catch ugly URLs
- urxvt.cutchars:        `()'*<>[]{|}"
+ !  urxvt.cutchars:        `()'*<>[]{|}"
  
  ! Appearance
  !  - use a bitmap font
- ! urxvt*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
- ! urxvt*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
  !  - use xft for drawing fonts
- urxvt*font:       xft:Terminus:18
+ urxvt*font:       xft:Inconsolata-dz for Powerline:size=10
  !  - cursor
  urxvt*cursorColor: #4df403
  !  - pseudo transparency
@@ -43,14 +41,14 @@
  !urxvt*transparent:true
  !
  !  - color scheme
- urxvt.background:  #000000
+ urxvt.background:  black
  urxvt.foreground:  #EBEBFF
  ! black + red
  !urxvt*color0:     #3f3f3f
  urxvt*color0:      #000000
  urxvt*color1:      #e01010
- ! green + yellow
- urxvt*color2:      #00AA00
+ ! melon pink + yellow
+ urxvt*color2:      #FF9900
  urxvt*color3:      #FFFF00
  ! blue + purple
  urxvt*color4:      RoyalBlue
@@ -70,3 +68,4 @@
  ! bright-cyan + bright-white
  urxvt*color14:     #7D7DFB
  urxvt*color15:     #ffffff
+
