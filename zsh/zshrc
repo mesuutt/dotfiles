@@ -49,10 +49,9 @@ plugins=(
     redis-cli
     ssh-agent
     tmux
-    vagrant
-    virtualenvwrapper
     extract
     tux
+    virtualenvwrapper
 )
 
 source $ZSH/oh-my-zsh.sh
