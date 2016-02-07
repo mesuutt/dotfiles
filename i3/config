@@ -197,6 +197,10 @@ mode "focused" {
 
 bindsym $mod+n mode "focused"
 
+# GET KEYCODE OF THE PRESSED KEY
+# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+
+
 # Assign multimedia keys for volume 
 # https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
@@ -208,4 +212,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # I used xev command for find key name
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10  
+
+
+# Taking Screenshot
+bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
 
