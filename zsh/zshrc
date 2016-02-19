@@ -75,3 +75,4 @@ fpath=(~/.dotfiles/zsh/completions $fpath)
 autoload -U compinit
 compinit
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
