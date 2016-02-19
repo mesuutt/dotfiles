@@ -142,13 +142,14 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-  status_command i3status -c ~/.i3/i3status.conf
-  font pango:Lekton Regular 11
-  # font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+  font 'ubuntu mono' 12
+  font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
   colors {
      #background #000000
-     # statusline #ffffff
-
+     #statusline #ffffff
+     #separator #666666
+     
      focused_workspace  #4c7899 #285577 #ffffff
      active_workspace   #333333 #5f676a #ffffff
      inactive_workspace #333333 #222222 #888888
@@ -217,3 +218,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 # Taking Screenshot
 bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
 
+# 
+# http://i3wm.org/docs/userguide.html#_automatically_starting_applications_on_i3_startup
+exec --no-startup-id ~/.i3/init.sh
