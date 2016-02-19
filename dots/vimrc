@@ -43,11 +43,13 @@ endif
 filetype plugin on
 syn on
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'dag/vim2hs'
+Plug 'gmarik/Vundle.vim'
+Plug 'dag/vim2hs'
 
-call vundle#end()            " required
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()            " required
 filetype plugin indent on    " required
