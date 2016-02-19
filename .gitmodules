@@ -7,9 +7,6 @@
 [submodule "zsh/additional-zsh-completions"]
 	path = zsh/additional-zsh-completions
 	url = git://github.com/zsh-users/zsh-completions.git
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = https://github.com/gmarik/Vundle.vim.git
 [submodule "vim/bundle/vim2hs"]
 	path = vim/bundle/vim2hs
 	url = https://github.com/dag/vim2hs.git
