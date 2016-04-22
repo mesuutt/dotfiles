@@ -57,3 +57,6 @@ export GOROOT=$HOME/files/go/goroot
 export GOPATH=$HOME/files/go/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
+
+
+eval "$(/home/mesuutt/files/repos/sub/bin/sub init -)"
