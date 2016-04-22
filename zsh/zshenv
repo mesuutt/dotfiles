@@ -60,3 +60,4 @@ export PATH=$PATH:$GOPATH/bin
 
 
 eval "$(/home/mesuutt/files/repos/sub/bin/sub init -)"
+export TERM=xterm-256color
