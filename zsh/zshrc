@@ -82,4 +82,7 @@ type hub > /dev/null 2>&1 && {
 source ~/.zshenv
 
 umask 077 # Anybody can't rwx my created files
-conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
+
+type conky > /dev/null 2>&1 && {
+    conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
+}
