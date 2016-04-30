@@ -62,11 +62,13 @@ ${color}${rss http://www.archlinux.org/feeds/news/ 60 item_titles 5 }
 $color$stippled_hr
 ${color slate grey}Recent Package Updates:
 ${color}${rss http://www.archlinux.org/feeds/packages/x86_64/ 30 item_titles 10 }
+$color$stippled_hr
+${color slate grey}Exploit DB:
+${color}${rss https://www.exploit-db.com/rss.xml 30 item_titles 10 }
+$color$stippled_hr${if_up eth0}
 $color$stippled_hr${if_up eth0}
 ${color slate grey}Ethernet (${addr eth0}):
-${color}Down: ${downspeed eth0}     Up: ${upspeed eth0}${endif}${if_up eth1}
-${color slate grey}Wireless (${addr eth1}):
-${color}Down: ${downspeed eth1}     Up: ${upspeed eth1}${endif}${if_up ppp0}
-${color slate grey}Turkcell 3G (${addr ppp0}):
-${color}Down: ${downspeed ppp0}     Up: ${upspeed ppp0}${endif}
+${color}Down: ${downspeed eth0}     Up: ${upspeed eth0}${endif}
+${if_up wlp1s0}${color slate grey}Wireless (${addr wlp1s0}):
+${color}Down: ${downspeed wlp1s0}     Up: ${upspeed wlp1s0}${endif}
 
