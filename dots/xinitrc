@@ -1,8 +1,27 @@
+# Execute after succesful login. slim.conf
+
 type xmodmap > /dev/null 2>&1 && { xmodmap $HOME/.Xmodmap; }
 
-exec i3 -V >> ~/.i3/i3log 2>&1
-#exec i3
 
 if hash unclutter 2> /dev/null; then
     unclutter -idle 1 & # Autohide mouse cursor                                                                                   
 fi
+
+type hub > /dev/null 2>&1 && {
+    eval "$(hub alias -s)"
+}
+
+type i3dzen2 > /dev/null 2>&1 && {
+    i3dzen2 -c ~/.i3/i3-dzen2-bridge.conf
+}
+
+type conky > /dev/null 2>&1 && {
+    conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
+} 
+
+
+
+exec i3 -V >> /tmp/i3.log 2>&1
+#exec i3
+
+

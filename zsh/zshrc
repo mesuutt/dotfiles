@@ -75,14 +75,3 @@ fpath=(~/.dotfiles/zsh/completions $fpath)
 autoload -U compinit
 compinit
 
-type hub > /dev/null 2>&1 && {
-    eval "$(hub alias -s)"
-}
-
-source ~/.zshenv
-
-umask 077 # Anybody can't rwx my created files
-
-type conky > /dev/null 2>&1 && {
-    conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
-}
