@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+# Arch Linux sources /etc/profile after sourcing ~/.zshenv
+# To prevent your $PATH being overwritten, source ~/.zprofile again
+test ~/.zshenv && source ~/.zshenv
