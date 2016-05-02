@@ -19,7 +19,9 @@ type conky > /dev/null 2>&1 && {
     conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
 } 
 
-
+type dunst > /dev/null 2>&1 && {
+    dunst -conf ~/.dotfiles/dots/dunstrc &  
+}
 
 exec i3 -V >> /tmp/i3.log 2>&1
 #exec i3
