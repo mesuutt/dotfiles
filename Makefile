@@ -28,16 +28,19 @@ zsh: backup-zsh
 	ln -svf `pwd`/zsh/zshenv $(HOME)/.zshenv
 	ln -svf `pwd`/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
 	ln -svf `pwd`/zsh/zsh_aliases $(HOME)/.zsh_aliases
+	ln -svf `pwd`/zsh/zprofile $(HOME)/.zprofile
 
 backup-zsh:
 	-mv $(HOME)/.zshrc{,.old}
 	-mv $(HOME)/.zshenv{,.old}
 	-mv $(HOME)/.zsh_aliases{,.old}
+	-mv $(HOME)/.zprofile{,.old}
 
 clean-zsh:
 	-rm -ri $(HOME)/.zshrc.old
 	-rm -ri $(HOME)/.zshenv.old
-	-rm -ri $(HOME)/.zsh_aliases.old
+	-rm -ri $(HOME)/.zsh_Yaliases.old	
+	-rm -ri $(HOME)/.zprofile.old
 
 vim:
 	ln -svf `pwd`/vim $(HOME)/.vim
@@ -50,7 +53,6 @@ bin:
 
 i3: backup-i3
 	ln -svf `pwd`/i3 $(HOME)/.i3
-	ln -svf `pwd`/i3/i3status.conf $(HOME)/.i3status.conf
 
 backup-i3:
 	-mv $(HOME)/.i3{,_old}
@@ -58,7 +60,6 @@ backup-i3:
 
 clean-i3:
 	-rm -ri $(HOME)/.i3_old
-	-rm -ri $(HOME)/.i3status.conf.old
 
 others:
 	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
