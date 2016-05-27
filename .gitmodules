@@ -10,3 +10,6 @@
 [submodule "vim/bundle/vim2hs"]
 	path = vim/bundle/vim2hs
 	url = https://github.com/dag/vim2hs.git
+[submodule "i3/i3-dzen2-bridge"]
+	path = i3/i3-dzen2-bridge
+	url = git@github.com:mesuutt/i3-dzen2-bridge.git
