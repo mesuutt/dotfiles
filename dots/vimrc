@@ -1,11 +1,25 @@
-iab chlog <c-r>=strftime("%Y-%m-%d")<cr>  Alper KANAT  <alperkanat@raptiye.org><cr>
-map <F4> :set filetype=
-map <F5> :set syntax=
-map <F6> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
-map <F7> :set wrap<CR>:set textwidth=80<CR>
-map <F8> :vs<CR>:bn<CR>
-map <C-x> :qa!<CR>
-nnoremap <silent> <F9> :TlistToggle<CR>
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/neosnippet'
+"Plug 'Shougo/neosnippet-snippets'
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'majutsushi/tagbar'
+
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
+
+Plug 'fatih/vim-go'
+
+
+call plug#end()
+
+
+"=====================================================
+"===================== SETTINGS ======================
 
 set nocompatible
 set hlsearch
@@ -34,22 +48,56 @@ set ruler
 set smarttab
 set smartindent
 
-colorscheme elflord
-
 if has("autocmd")
     filetype plugin indent on
 endif
 
 filetype plugin on
+filetype plugin indent on    " required
 syn on
 
-call plug#begin('~/.vim/plugged')
+colorscheme elflord
 
-Plug 'gmarik/Vundle.vim'
-Plug 'dag/vim2hs'
+"=====================================================
+"===================== MAPPINGS ======================
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+let mapleader=","
+iab chlog <c-r>=strftime("%Y-%m-%d")<cr>  Mesut Tasci<cr>
+map <F6> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+map <F7> :set wrap<CR>:set textwidth=80<CR>
+map <F8> :vs<CR>:bn<CR>
 
-call plug#end()            " required
-filetype plugin indent on    " required
+" Fast saving
+nnoremap <leader>w :w!<cr>
+nnoremap <silent> <leader>q :q!<CR>
+
+" Center the screen
+nnoremap <space> zz
+
+" Source the current Vim file
+nnoremap <leader>pr :Runtime<CR>
+
+" Close all but the current one
+nnoremap <leader>o :only<CR>
+
+nnoremap <silent> <F9> :TlistToggle<CR>
+
+" Source (reload configuration)
+nnoremap <silent> <F5> :source $MYVIMRC<CR>
+
+" Do not show stupid q: window
+map q: :q
+
+"====================================================
+"===================== PLUGINS ======================
+
+" ==================== Tagbar ====================
+nmap <F8> :TagbarToggle<CR>
+
+
+" ==================== NerdTree ====================
+" For toggling
+noremap <Leader>n :NERDTreeToggle<cr>
+noremap <Leader>f :NERDTreeFind<cr>
+
+let NERDTreeShowHidden=1
