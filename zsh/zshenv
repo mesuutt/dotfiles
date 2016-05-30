@@ -10,9 +10,6 @@ export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 
-export VAGRANT_HOME=~/files/vagrant/.vagrant.d/
-
-
 if [ -d $HOME/.bin ]; then
     path+=($HOME/.bin)
 fi
@@ -33,8 +30,6 @@ export PATH
 fpath=(~/.dotfiles/zsh/additional-zsh-completions/src $fpath)
 
 # Colorful man pages
-# Ertug Karamatli <ertug@karamatli.com>  http://wiki.clug.org.za/wiki/Colour_on_the_command_line
-
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -49,7 +44,7 @@ export LESS=-RFX
 export PURE_GIT_PULL=0 # Dont check whenever git remote updated
 
 # https://github.com/jahendrie/cheat
-export CHEATPATH=~/.cheats:/usr/share/cheat/sheets
+export DEFAULT_CHEAT_DIR=/home/mesuutt/files/repos/cheats
 
 
 # Golang env variables
