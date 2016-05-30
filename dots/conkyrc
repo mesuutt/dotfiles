@@ -3,7 +3,7 @@ use_xft yes
 xftfont Sans:size=8
 xftalpha 0.8
 out_to_console no
-update_interval 2
+update_interval 4
 total_run_times 0
 own_window yes
 own_window_type override
