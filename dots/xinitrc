@@ -11,12 +11,12 @@ type hub > /dev/null 2>&1 && {
     eval "$(hub alias -s)"
 }
 
-type ~/.bin/i3dzen2.sh > /dev/null 2>&1 && {
-    ~/.bin/i3dzen2.sh -c ~/.i3/i3-dzen2-bridge.conf
+type i3dzen2.sh > /dev/null 2>&1 && {
+    i3dzen2.sh -c ~/.i3/i3-dzen2-bridge.conf
 }
 
 type conky > /dev/null 2>&1 && {
-    conky -c ~/.dotfiles/dots/conkyrc > /dev/null 2>&1
+    conky -c ~/.dotfiles/dots/conkyrc-system > /dev/null 2>&1
 } 
 
 type dunst > /dev/null 2>&1 && {

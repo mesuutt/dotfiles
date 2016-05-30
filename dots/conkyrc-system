@@ -1,0 +1,34 @@
+background yes
+use_xft yes
+xftfont ubuntu mono:bold:size=10
+xftalpha 1
+update_interval 2
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+#minimum_size 100
+#maximum_width 400
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color D5D5D5
+default_shade_color 000000
+default_outline_color D5D5D5
+alignment top_left
+gap_x 10
+gap_y 30
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+${color D23D3D}UPTIME : ${color D5D5D5}$alignr$uptime
+${color D23D3D}CPU    : ${color D5D5D5}$alignr${cpu cpu0}% ${cpubar cpu0 7,50}
+${color D23D3D}RAM    : ${color D5D5D5}$alignr$memperc% ${membar 7,50}
+${color D23D3D}SWAP   : ${color D5D5D5}$alignr$swapperc% ${swapbar 7,50}
+${color D23D3D}IN/OUT : ${color D5D5D5}$alignr${upspeed wlp1s0}/${downspeed wlp1s0}
