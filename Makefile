@@ -53,6 +53,7 @@ bin:
 
 i3: backup-i3
 	ln -svf `pwd`/i3 $(HOME)/.i3
+	ln -svf `pwd`/i3/i3-dzen2-bridge/i3dzen2.sh $(HOME)/.bin/i3dzen2.sh
 
 backup-i3:
 	-mv $(HOME)/.i3{,_old}
