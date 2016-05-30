@@ -76,3 +76,10 @@ autoload -U compinit
 compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+type cheat > /dev/null 2>& 1 && {
+    # Colorize cheat command output
+    unalias cheat
+    function cheat(){ cheat $1 | GREP_COLOR='1;32' grep -E --color=always '#.*$|$'; }
+}
