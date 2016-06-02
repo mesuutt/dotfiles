@@ -50,6 +50,8 @@ vim:
 bin:
 	-mkdir $(HOME)/.bin
 	ln -svf `pwd`/bin $(HOME)/.bin
+	curl -O https://raw.githubusercontent.com/bilgi-webteam/kommit/master/bin/git-kommit $(HOME)/.bin/.
+	chmod +x $(HOME)/.bin/git-kommit
 
 i3: backup-i3
 	ln -svf `pwd`/i3 $(HOME)/.i3
