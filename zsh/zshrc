@@ -52,6 +52,7 @@ plugins=(
     extract
     tux
     virtualenvwrapper
+    taskwarrior
 )
 
 source $ZSH/oh-my-zsh.sh

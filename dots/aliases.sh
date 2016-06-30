@@ -17,7 +17,7 @@ alias vst="vagrant status"
 alias vsr="vagrant reload"
 alias vht="vagrant halt"
 
-alias t="todo.sh"
+alias t="task"
 
 alias cp="cp --preserve=all"
 
