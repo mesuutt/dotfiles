@@ -12,23 +12,37 @@ bash: backup-bash
 	ln -svf `pwd`/bash/bash_profile $(HOME)/.bash_profile
 	ln -svf `pwd`/bash/bash_aliases $(HOME)/.bash_aliases
 
-backup-bash:
-	-mv $(HOME)/.bashrc{,.old}
-	-mv $(HOME)/.bash_profile{,.old}
-	-mv $(HOME)/.bash_aliases{,.old}
-
-clean-bash:
-	-rm -ri $(HOME)/.bashrc.old
-	-rm -ri $(HOME)/.bash_profile.old
-	-rm -ri $(HOME)/.bash_aliases.old
-
-
 zsh: backup-zsh
 	ln -svf `pwd`/zsh/zshrc $(HOME)/.zshrc
 	ln -svf `pwd`/zsh/zshenv $(HOME)/.zshenv
 	ln -svf `pwd`/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
 	ln -svf `pwd`/zsh/zsh_aliases $(HOME)/.zsh_aliases
 	ln -svf `pwd`/zsh/zprofile $(HOME)/.zprofile
+
+vim:
+	ln -svf `pwd`/vim $(HOME)/.vim
+	
+	vim +PlugInstall
+
+bin:
+	ln -svf `pwd`/bin $(HOME)/.bin
+	curl -O https://raw.githubusercontent.com/bilgi-webteam/kommit/master/bin/git-kommit $(HOME)/.bin/.
+	chmod +x $(HOME)/.bin/git-kommit
+	
+	wget git.io/trans -O $(HOME)/.bin/trans
+	chmod +x $(HOME)/.bin/trans
+
+i3: backup-i3
+	ln -svf `pwd`/i3 $(HOME)/.i3
+	ln -svf `pwd`/i3/i3-dzen2-bridge/i3dzen2.sh $(HOME)/.bin/i3dzen2.sh
+
+others:
+	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
+	
+	-unlink $(HOME)/.scripts
+	ln -svf `pwd`/scripts $(HOME)/.scripts
+
+
 
 backup-zsh:
 	-mv $(HOME)/.zshrc{,.old}
@@ -42,20 +56,16 @@ clean-zsh:
 	-rm -ri $(HOME)/.zsh_Yaliases.old	
 	-rm -ri $(HOME)/.zprofile.old
 
-vim:
-	ln -svf `pwd`/vim $(HOME)/.vim
-	
-	vim +PluginInstall +qall
 
-bin:
-	-mkdir $(HOME)/.bin
-	ln -svf `pwd`/bin $(HOME)/.bin
-	curl -O https://raw.githubusercontent.com/bilgi-webteam/kommit/master/bin/git-kommit $(HOME)/.bin/.
-	chmod +x $(HOME)/.bin/git-kommit
+backup-bash:
+	-mv $(HOME)/.bashrc{,.old}
+	-mv $(HOME)/.bash_profile{,.old}
+	-mv $(HOME)/.bash_aliases{,.old}
 
-i3: backup-i3
-	ln -svf `pwd`/i3 $(HOME)/.i3
-	ln -svf `pwd`/i3/i3-dzen2-bridge/i3dzen2.sh $(HOME)/.bin/i3dzen2.sh
+clean-bash:
+	-rm -ri $(HOME)/.bashrc.old
+	-rm -ri $(HOME)/.bash_profile.old
+	-rm -ri $(HOME)/.bash_aliases.old
 
 backup-i3:
 	-mv $(HOME)/.i3{,_old}
@@ -64,11 +74,6 @@ backup-i3:
 clean-i3:
 	-rm -ri $(HOME)/.i3_old
 
-others:
-	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
-	
-	-unlink $(HOME)/.scripts
-	ln -svf `pwd`/scripts $(HOME)/.scripts
 
 
 define HELP
