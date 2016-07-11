@@ -282,8 +282,8 @@ bindsym $mod+o mode "$mode_launcher"
 set $mode_launcher Launch: [f]irefox [b]tsync [g]imp 
 
 mode "$mode_launcher" {
-	bindsym f exec ~/.bin/firefox.sh &> /dev/null
-	bindsym b exec ~/.bin/bittorrent-sync.sh 
+	bindsym f exec ~/.bin/firefox.sh, mode "default" 
+	bindsym b exec ~/.bin/bittorrent-sync.sh, mode "default"  
 	bindsym g exec ~/.bin/gimp.sh, mode "default"
 
     bindsym Escape mode "default"
