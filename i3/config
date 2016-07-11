@@ -154,6 +154,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 
+# Open applications in specific workspaces
+assign [class="Firefox"] 2
+assign [class="Gimp"] 5
 
 
 ##########################################################################
@@ -177,13 +180,16 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
 
 
+
+##########################################################################
+#                                focus windows                           #
+##########################################################################
+
 mode "focused" {
     # Look at http://www.slackword.net/?p=657
 
     # hardcoded focus keybindings
-    bindsym b [class="(?i)firefox"] focus
     bindsym w [class="(?i)terminal" title="weechat"] focus
-    bindsym m [class="(?i)thunderbird"] focus
     bindsym f [class="(?i)terminal" title="mc"] focus
     bindsym z [class="(?i)zathura"] focus
 
@@ -245,7 +251,6 @@ bindsym $mod+r mode "resize"
 #                           bar settings and colors                      #
 ##########################################################################
 
-bindsys $mod+m bar mode toggle
 
 bar {
   position top
@@ -267,19 +272,27 @@ bar {
 }
 
 
-
 ####################################################################
 #                      Aplications                                 #
 ####################################################################
 
+
+
+bindsym $mod+o mode "$mode_launcher"
+set $mode_launcher Launch: [f]irefox [b]tsync [g]imp 
+
+mode "$mode_launcher" {
+	bindsym f exec ~/.bin/firefox.sh &> /dev/null
+	bindsym b exec ~/.bin/bittorrent-sync.sh 
+	bindsym g exec ~/.bin/gimp.sh, mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+
 # http://i3wm.org/docs/userguide.html#_automatically_starting_applications_on_i3_startup
 exec --no-startup-id ~/.i3/init.sh
-
-
-bindsys $mod+Shift+w exec ~/.bin/firefox.sh &> /dev/null
-
-# Open applications on specific workspaces
-assign [class="Firefox"] 2
 
 
 
