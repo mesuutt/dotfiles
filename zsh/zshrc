@@ -53,6 +53,7 @@ plugins=(
     tux
     virtualenvwrapper
     taskwarrior
+    fasd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -79,8 +80,15 @@ compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-type cheat > /dev/null 2>& 1 && {
+type cheat &> /dev/null && {
     # Colorize cheat command output
     unalias cheat
     function cheat(){ cheat $1 | GREP_COLOR='1;32' grep -E --color=always '#.*$|$'; }
+}
+
+
+type fasd &> /dev/null && {
+    bindkey '^X^Z' fasd-complete    # C-x C-z to do fasd-complete (files and directories)
+    bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
+    bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories)
 }
