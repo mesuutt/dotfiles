@@ -127,7 +127,10 @@ mode "$mode_system" {
 # Ex: Go to ws 4 => $mod+4, Go to previous visited ws => $mod+4 
 workspace_auto_back_and_forth yes
 bindsym $mod+z workspace back_and_forth
-# GET KEYCODE OF THE PRESSED KEY
+
+# Go to next/prev  workspace with Alt+Left/Right arrow keys
+bindsym Mod1+Right workspace next
+bindsym Mod1+Left workspace prev
 
 # switch to workspace
 bindsym $mod+1 workspace 1
