@@ -66,9 +66,6 @@ unsetopt correct_all
 test -f ~/.zsh_aliases && source ~/.zsh_aliases
 test -f ~/.local.sh && source ~/.local.sh
 
-#z - autojump alternative
-test -f ~/.scripts/z.sh && source ~/.scripts/z.sh
-
 # COMPLETION SETTINGS
 # add custom completion scripts
 fpath=(~/.dotfiles/zsh/completions $fpath) 
