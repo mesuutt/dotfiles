@@ -11,7 +11,9 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/files/repos/taskwarrior/data
+data.location=~/.task/data
+
+default.project=inbox
 
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
@@ -29,3 +31,9 @@ data.location=~/files/repos/taskwarrior/data
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
+taskd.server=localhost:53589
+taskd.credentials=Public\/MesutTasci\/1906605a-1d45-47e9-b7e0-ca580bb81b95
+taskd.ca=\/home\/mesuutt\/.task\/ssl\/ca.cert.pem
+taskd.trust=ignore hostname
+taskd.key=\/home\/mesuutt\/.task\/ssl\/MesutTasci.key.pem
+taskd.certificate=\/home\/mesuutt\/.task\/ssl\/MesutTasci.cert.pem
