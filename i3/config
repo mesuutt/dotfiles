@@ -2,6 +2,10 @@
 
 # exec $HOME/.i3/init.sh
 
+# Run scripts on i3 startup
+exec --no-startup-id ~/.i3/init.sh
+
+
 # Color classes.
 # class           border    background   text     indicator
 client.focused    #0087af   #0087af      #ffffff
@@ -20,16 +24,16 @@ font pango: Ubuntu Mono 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Disable window titlebars entirely
-for_window [class="^.*"] border pixel 1
-#smart_borders on
 
+# Disable window titlebars entirely
+for_window [class="^.*"] border none
+
+popup_during_fullscreen smart
 
 bindsym $mod+minus exec i3 move scratchpad
 bindsym $mod+Shift+minus exec i3 scratchpad show
 
 # start a terminal
-# bindsym $mod+Return exec ~/.dotfiles/term
 bindsym $mod+Return exec i3-sensible-terminal 
 
 # kill focused window
@@ -163,24 +167,28 @@ assign [class="Gimp"] 5
 
 
 ##########################################################################
-#                              Multimedia keybinds                       #
+#                           bar settings and colors                      #
 ##########################################################################
 
-# For getting name of current pressed key:
-# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
-# Assign multimedia keys for volume 
-# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
-
-# Brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10  
-
-# Taking Screenshot
-bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
+bar {
+  position top
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+  font 'ubuntu mono' 12
+  font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
+  mode hide # Hide i3bar. Shown when $mod key press
+  hidden_state hide
+  colors {
+     #background #000000
+     #statusline #ffffff
+     #separator #666666
+     
+     focused_workspace  #4c7899 #285577 #ffffff
+     active_workspace   #333333 #5f676a #ffffff
+     inactive_workspace #333333 #222222 #888888
+     urgent_workspace   #2f343a #900000 #ffffff
+  }
+}
 
 
 
@@ -251,28 +259,25 @@ bindsym $mod+r mode "resize"
 
 
 ##########################################################################
-#                           bar settings and colors                      #
+#                              Multimedia keybinds                       #
 ##########################################################################
 
+# For getting name of current pressed key:
+# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
-bar {
-  position top
-  status_command i3blocks -c ~/.i3/i3blocks.conf
-  font 'ubuntu mono' 12
-  font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
-  mode hide # Hide i3bar. Shown when $mod key press
-  hidden_state hide
-  colors {
-     #background #000000
-     #statusline #ffffff
-     #separator #666666
-     
-     focused_workspace  #4c7899 #285577 #ffffff
-     active_workspace   #333333 #5f676a #ffffff
-     inactive_workspace #333333 #222222 #888888
-     urgent_workspace   #2f343a #900000 #ffffff
-  }
-}
+# Assign multimedia keys for volume 
+# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# Brightness control
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10  
+
+# Taking Screenshot
+bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
+
 
 
 ####################################################################
@@ -292,10 +297,6 @@ mode "$mode_launcher" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
-
-
-# http://i3wm.org/docs/userguide.html#_automatically_starting_applications_on_i3_startup
-exec --no-startup-id ~/.i3/init.sh
 
 
 
