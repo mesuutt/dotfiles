@@ -267,9 +267,17 @@ bindsym $mod+r mode "resize"
 
 # Assign multimedia keys for volume 
 # https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# If you use alsa
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# If you use PulseAudio
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0  +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0  -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+
 
 # Brightness control
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
