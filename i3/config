@@ -176,8 +176,9 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
   font 'ubuntu mono' 12
   font -misc-fixed-medium-r-normal--18-120-100-100-C-90-iso10646-1
-  mode hide # Hide i3bar. Shown when $mod key press
-  hidden_state hide
+  #mode hide # Hide i3bar. Shown when $mod key press
+  #hidden_state hide
+  
   colors {
      #background #000000
      #statusline #ffffff
@@ -189,8 +190,6 @@ bar {
      urgent_workspace   #2f343a #900000 #ffffff
   }
 }
-
-
 
 ##########################################################################
 #                                focus windows                           #
