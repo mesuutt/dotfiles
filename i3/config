@@ -26,9 +26,8 @@ floating_modifier $mod
 
 
 # Disable window titlebars entirely
-for_window [class="^.*"] border none
-
-popup_during_fullscreen smart
+for_window [class="[Firefox|urxvt|Gimp]"] border none
+#popup_during_fullscreen smart
 
 bindsym $mod+minus exec i3 move scratchpad
 bindsym $mod+Shift+minus exec i3 scratchpad show
