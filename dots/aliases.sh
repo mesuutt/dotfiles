@@ -4,19 +4,10 @@
 
 alias h='howdoi'
 
-alias gap='git add -p'
 alias gn="git annex"
 alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeeper post-install'
 
 alias y='yaourt'
-
-alias vup="vagrant up"
-alias vsh="vagrant ssh"
-alias vsp="vagrant suspend"
-alias vst="vagrant status"
-alias vsr="vagrant reload"
-alias vht="vagrant halt"
-
 alias t="task"
 
 alias cp="cp --preserve=all"
@@ -40,5 +31,4 @@ alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
-
 alias v='f -e vim' # quick opening files with vim
