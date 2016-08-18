@@ -278,8 +278,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 
 # Brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10  
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym XF86MonBrightnessUp exec xbacklight -inc 1 
 
 # Taking Screenshot
 bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:%M:%S).png"
