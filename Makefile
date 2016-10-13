@@ -38,10 +38,6 @@ i3: backup-i3
 
 others:
 	for i in `ls dots/`; do ln -svf `pwd`/dots/$$i $(HOME)/.$$i ; done
-	
-	-unlink $(HOME)/.scripts
-	ln -svf `pwd`/scripts $(HOME)/.scripts
-
 
 
 backup-zsh:
