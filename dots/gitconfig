@@ -46,6 +46,9 @@
     rm-deleted = "!f() { for x in `git status | grep deleted | awk '{print $3}'`; do git rm $x; done; }; f"
     permission-reset = "!git diff -p -R | grep -E '^(diff|(old|new) mode)' | git apply" 
     nfm = "!f(){ git -c core.fileMode=false $@; };f" 
+
+    ; Reset by interactive select
+    irs = "!f(){ git reset $(git diff --name-only --cached | fzf); }; f"
 [push]
     default = current
 [merge]
