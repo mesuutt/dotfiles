@@ -43,7 +43,7 @@
     unstage = reset HEAD
 
     ;Stage all manually deleted files
-    rm-deleted = "!f() { for x in `git status | grep deleted | awk '{print $3}'`; do git rm $x; done; }; f"
+    rm-deleted = "!git rm $(git ls-files --deleted)"
     permission-reset = "!git diff -p -R | grep -E '^(diff|(old|new) mode)' | git apply" 
     nfm = "!f(){ git -c core.fileMode=false $@; };f" 
 
