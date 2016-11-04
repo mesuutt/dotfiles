@@ -15,16 +15,16 @@ fi
 
 start_time=$(head -n1 $FILE)
 current_time=$(date +%s)
-diff=$(($current_time - $start_time)) 
+diff=$(($current_time - $start_time))
 minutes=$((($diff / 60) % 60))
 seconds=$(($diff % 60 ))
 
 if [ $work_time -eq $minutes ] || [ $work_time -lt $minutes ]; then
-	last_shown_time=$(tail -1 $FILE)
+    last_shown_time=$(tail -1 $FILE)
 
     # How much time past after message display.
-    after_display=$((((($current_time - $last_shown_time)) / 60) % 60)) 
-    
+    after_display=$((((($current_time - $last_shown_time)) / 60) % 60))
+
     # Show message again at least one minute after
     if [ $after_display -gt 1 ] || [ $after_display -eq 1 ]; then
         pkill i3-nagbar
@@ -35,7 +35,7 @@ if [ $work_time -eq $minutes ] || [ $work_time -lt $minutes ]; then
         -t warning -f 'pango:DejaVu Sans Mono 20' \
         -b REST "echo \"$break_end\n0\" > $FILE && pkill i3-nagbar " \
         -b '1 Minute' "echo $last_shown_time >> $FILE && pkill i3-nagbar" &> /dev/null &
-	fi
+    fi
 fi
 
 echo "$minutes:$seconds"
