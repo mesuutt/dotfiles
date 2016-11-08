@@ -48,7 +48,12 @@
     nfm = "!f(){ git -c core.fileMode=false $@; };f" 
 
     ; Reset by interactive select
-    irs = "!f(){ git reset $(git diff --name-only --cached | fzf); }; f"
+    irs = "!git reset $(git diff --name-only --cached | fzf)"
+    
+    ; Choice files with interactive select to pip to git add -p
+    ; Usuful if you want to commit  changes these related with same thing within same commit.
+    iap = "!git add -p $(git diff --name-only | fzf -m)"
+
 [push]
     default = current
 [merge]
