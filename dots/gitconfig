@@ -46,13 +46,15 @@
     rm-deleted = "!git rm $(git ls-files --deleted)"
     permission-reset = "!git diff -p -R | grep -E '^(diff|(old|new) mode)' | git apply" 
     nfm = "!f(){ git -c core.fileMode=false $@; };f" 
-
+    
+    ; interactive reset
     ; Reset by interactive select
     irs = "!git reset $(git diff --name-only --cached | fzf)"
-    
+   
+    ; interactive add
     ; Choice files with interactive select to pip to git add -p
     ; Usuful if you want to commit  changes these related with same thing within same commit.
-    iap = "!git add -p $(git diff --name-only | fzf -m)"
+    ia = "!git add -p $(git diff --name-only | fzf -m)"
 
 [push]
     default = current
