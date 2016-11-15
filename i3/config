@@ -302,6 +302,7 @@ mode "$mode_launcher" {
 	bindsym b exec ~/.bin/bittorrent-sync.sh, mode "default"  
 	bindsym g exec ~/.bin/gimp.sh, mode "default"
 	bindsym p exec ~/.bin/pycharm.sh, mode "default"
+	bindsym s exec ~/.bin/sublime, mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
