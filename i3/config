@@ -162,6 +162,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # Open applications in specific workspaces
 assign [class="Firefox"] 2
+assign [class="Google-chrome"] 2
 assign [class="jetbrains-pycharm"] 3
 assign [class="Sublime"] 3
 assign [class="Gimp"] 5
