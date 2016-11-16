@@ -296,13 +296,14 @@ bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:
 
 
 bindsym $mod+o mode "$mode_launcher"
-set $mode_launcher Launch: [f]irefox [p]ycharm [b]tsync [g]imp 
+set $mode_launcher Launch: [f]irefox [c]hrome [s]ublime [p]ycharm [b]tsync [g]imp 
 
 mode "$mode_launcher" {
 	bindsym f exec ~/.bin/firefox.sh, mode "default" 
 	bindsym b exec ~/.bin/bittorrent-sync.sh, mode "default"  
 	bindsym g exec ~/.bin/gimp.sh, mode "default"
 	bindsym p exec ~/.bin/pycharm.sh, mode "default"
+	bindsym c exec google-chrome, mode "default"
 	bindsym s exec ~/.bin/sublime, mode "default"
 
     bindsym Escape mode "default"
