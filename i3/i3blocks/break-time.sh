@@ -33,7 +33,7 @@ if [ $work_time -eq $minutes ] || [ $work_time -lt $minutes ]; then
 
         i3-nagbar -m "Time is up! Rest for $break_time minutes." \
         -t warning -f 'pango:DejaVu Sans Mono 20' \
-        -b REST "echo \"$break_end\n0\" > $FILE && pkill i3-nagbar " \
+        -b REST "echo -e \"$break_end\n0\" > $FILE && pkill i3-nagbar " \
         -b '1 Minute' "echo $last_shown_time >> $FILE && pkill i3-nagbar" &> /dev/null &
     fi
 fi
