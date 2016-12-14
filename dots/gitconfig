@@ -49,7 +49,7 @@
     
     ; interactive reset
     ; Reset by interactive select
-    irs = "!git reset $(git diff --name-only --cached | fzf)"
+    irs = "!git reset $(git diff --name-only --cached | fzf -m)"
    
     ; interactive add
     ; Choice files with interactive select to pip to git add -p
