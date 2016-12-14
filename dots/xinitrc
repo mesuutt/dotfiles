@@ -24,7 +24,7 @@ type dunst > /dev/null 2>&1 && {
 }
 
 type redshift &> /dev/null && {
-    redshift ~/.dotfiles/dots/redshift.conf &  
+    redshift -c ~/.dotfiles/dots/redshift.conf &  
 }
 
 
