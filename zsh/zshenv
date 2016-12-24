@@ -22,6 +22,8 @@ if [ -d $HOME/.gem/ruby/2.1.0/bin/ ]; then
     path+=($HOME/.gem/ruby/2.1.0/bin/)
 fi
 
+path+=($HOME/.virtualenvs/py3/bin)
+
 # Set PATH/path to be unique
 typeset -U path
 
