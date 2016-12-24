@@ -3,7 +3,7 @@
 
 # Minutes
 work_time=20
-break_time=5
+break_time=2
 
 FILE=/tmp/i3blocksBreakTime.txt
 
