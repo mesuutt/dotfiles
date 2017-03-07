@@ -15,6 +15,7 @@ Plug 'majutsushi/tagbar'
 
 Plug 'fatih/vim-go'
 
+Plug 'ledger/vim-ledger'
 
 call plug#end()
 
