@@ -165,14 +165,15 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Open applications in specific workspaces
 assign [class="Firefox"] 2
 assign [class="Google-chrome"] 2
+assign [class="Chromium"] 2
 assign [class="jetbrains-pycharm"] 3
 assign [class="Sublime"] 3
 assign [class="Gimp"] 5
 
+
 ##########################################################################
 #                           bar settings and colors                      #
 ##########################################################################
-
 
 bar {
   position top
@@ -294,8 +295,6 @@ bindsym Print exec "import -window root ~/Downloads/screenshot$(date +%Y%m%d-%H:
 #                      Aplications                                 #
 ####################################################################
 
-
-
 bindsym $mod+o mode "$mode_launcher"
 set $mode_launcher Launch: [f]irefox [c]hrome [s]ublime [p]ycharm [b]tsync [g]imp 
 
@@ -304,12 +303,10 @@ mode "$mode_launcher" {
 	bindsym b exec ~/.bin/bittorrent-sync.sh, mode "default"  
 	bindsym g exec ~/.bin/gimp.sh, mode "default"
 	bindsym p exec ~/.bin/pycharm.sh, mode "default"
-	bindsym c exec ~/.bin/chrome.sh, mode "default"
+	bindsym c exec ~/.bin/chromium.sh, mode "default"
 	bindsym s exec ~/.bin/sublime, mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
-
-
 
