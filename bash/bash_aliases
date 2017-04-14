@@ -9,6 +9,7 @@ else
     alias ls="ls -G"
 fi
 
+alias g="git"
 alias ll="ls -l"
 alias la="ls -la"
 alias grep="grep --color"
