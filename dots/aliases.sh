@@ -33,9 +33,12 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim'       # quick opening files with vim
 
-alias gap='git add -p'
+alias gf='git fetch'
+alias gp='git pull'
+alias gc='git commit -m '
+alias gs='git status'
+alias ga='git add -p'
 alias gr='git reset .'
-alias gcm='git commit -m '
-alias gs='git status '
 
 alias sp='snipper'
+alias s='ag -nr'
