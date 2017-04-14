@@ -68,7 +68,7 @@ alias emacs="emacs -nw"
 alias virsh="virsh -c qemu:///system"
 
 # grep that excludes some files from the output
-gr () {
+grp() {
     find -type f \
         ! -iwholename "*.svn*" \
         ! -iwholename "*.git*" \
@@ -90,3 +90,5 @@ gr () {
         ! -name "*bak" \
     | xargs grep --color=auto $@ 2>/dev/null;
 }
+
+test -f ~/.aliases.sh && source ~/.aliases.sh

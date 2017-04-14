@@ -33,7 +33,7 @@ fi
 ADDITIONAL_FUNCTIONS="$HOME/.bin/functions.sh"
 test -f $ADDITIONAL_FUNCTIONS && source $ADDITIONAL_FUNCTIONS
 
-test ~/.scripts/z.sh && source ~/.scripts/z.sh
+test -f ~/.scripts/z.sh && source ~/.scripts/z.sh
 
 umask 077 # Anybody can't rwx my created files
 
